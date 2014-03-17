@@ -1,0 +1,23 @@
+- How to update your repository to pull in the latest changes from the server:
+> svn up
+
+- How to commit the changes to a file that already existed before:
+> svn commit -m "Changed the Authorlist" <filename>
+
+- How to check which files are under version control:
+> svn status
+
+- How to add a new file to the version control system:
+> svn add <filename>
+> svn commit -m "added a file with important content"
+
+- How to read the commit messages:
+> svn log
+
+- How to find out who changed what in a file (only useful for text files):
+> svn annotate <filename>
+
+
+- How to compile the latex document:
+> ./compileLatex
+
