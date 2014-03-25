@@ -1,0 +1,25 @@
+compilation of LC detector R&D efforts
+    R&D activities involving the Scintillator ECAL
+Q: Major R&D efforts and recent developments since ILC DBD (with publications/references to major results);
+A: (1)   introducing a new scintillation light readout scheme, with different scintillator strip shape  by having better homogeneity 
+
+ (2) photo-sensor  of  increased number of pixels in 1mmx1mm , this leads larger  dynamic range for the calorimeter
+
+(3) more experience on the FE read out board and ASICs
+
+They are not published yet, instead some proceedings 
+
+ 
+Q:   Engineering challenges;
+A: (1) wrapping the scintillator strip and align them on the FE read out layer automatically 
+  (2) mass test facility for the read out layer 
+Q:  Detector R&D plans for the coming years;
+A: (1) optimizing scintillator layer: shape of scintillator strip, how to read out scintillation light, the location of  photo-sensor, size and shape of photo-sensor and mass production scheme
+  (2) developing photo-sensor with Hamamatsu photonics company, to have lager dynamic range and mass test scheme
+  (3)   establish a detector fabrication plan
+Q: List of participating institutes;
+A: Nihon Dental University, Shinshu University, Tokyo University (ICEPP), Tsukuba University
+Q: Perspectives of this R&D for applications beyond the ILC 
+      (with references if technology is already used in the other projects)
+A: (1) photo-sensor named MPPC from Hamamatsu photonics INC is employed for the T2K experiment, CMS upgrade (HC-CAL), BELLII detector (endocarp muon),   
+(2) PET and SPECT development 
