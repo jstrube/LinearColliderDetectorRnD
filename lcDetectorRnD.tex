@@ -1,94 +1,31 @@
-\documentclass[11pt]{article}
-
+\documentclass[10pt]{article}
 \usepackage{color}
+
 \begin{document}
 \section{Pixel Detector R\&D}
-\subsection{DEPFET}
-Spokesperson: Laci Andreaceck,
-contacted: 
-\subsection{ChronoPix}
-contacted:
+\include{DEPFET}
+\include{Chronopix}
 \subsection{3D integration}
-contacted:
-\subsection{FPCCD}
-contacted:
-\subsection{CMOS}
-contacted:
+\subsubsection{Introduction}
+\subsubsection{Recent Milestones}
+\subsubsection{Engineering Challenges}
+\subsubsection{Future Plans}
+\subsubsection{Applications Outside of Linear Colliders}
+
+\include{FPCCD}
+\include{CMOS}
 \subsection{Support Structures}
 \subsection{BeanChip}
-\section{Silicon Strip R\&D}
-\subsection{KPIX}
-KPiX Description:
 
-KPiX is a 1,024 channel “System on a Chip” intended for bump bonding to large area Si sensors, enabling low multiple scattering Si strip tracking and high density Particle Flow calorimetry for SiD at the International Linear Collider (ILC).
+\section{Tracking Detectors}
+\subsection{Silicon Strip R\&D}
 
-Each channel consists of a dynamically switchable gain charge amplifier; shaping; threshold discrimination; and 4 sample and hold capacitors and 4 timing registers. The chip permits 4 separate measurements of amplitude and time of threshold crossing during each train, and amplitude digitization and readout during the intertrain period. The dynamic range is from sub minimum ionizing particle (mip) (320 micron silicon) to more than 2,000 mip. KPiX also has a calibration system for each channel, servos for leakage compensation, “DC” reset for asynchronous operation for testing with cosmic rays, and polarity inversion for use with GEMs and similar detectors. The noise floor is about 0.15 fC (~1,000 electrons), and the maximum signal is 10 pC (utilizing the dynamic range switching). The full dynamic range corresponds to 17 bits. 
-
-KPiX R&D towards SiD
-
-R&D Status:
-ILC related R&D in the US is largely unfunded and small efforts are being kept alive on the margins. The KPiX R&D is such an example of necessary work for SiD that is marginally alive.
-At this time, KPiX is seen as the baseline readout system for the tracker and electromagnetic calorimeter .  A stack of 13 EMCal sensors with bump bonded KPiX was assembled for a beam test at SLAC in the summer of 2013. That test discovered that two kinds of crosstalk are significant:
-•	In-time crosstalk occurs due to parasitic coupling of traces on metal 2 of the sensor to other pixels. The level of crosstalk increases with the size of the signal, and decreases with increased speed of the front end charge amplifier (meaning increased current and power dissipation).  A new sensor design is being developed that uses metal 1 to shield the traces of metal 2, and these ideas will be tested in the next sensor prototype.
-•	Out-of-time cross talk occurs when many pixels are hit and reset simultaneously. The resets collectively cause other pixels to trigger, and a cascade builds up. This uses up all the KPiX buffers. The root cause of the problem appears to be some internal logic within KPiX that is not current limited, and will require design modification.
-A more general issue is that both the EMCal and tracker sensors from Hamamatsu were ordered with Al pads, as it was believed that plating (by the zincate process) a stack of metals culminating with Au would be straightforward. This turns out to be wrong. After many attempts at University of California Davis (UCD) and local industry, IZM  has Ar ion etched the pad surfaces and sputtered a base layer, permitting the buildup of a stack that ended with Au, and permitting the attachment with solder bumps that had been placed during KPiX manufacture by TSMC. Testing of these sensors revealed ~10\% pixel to pixel shorts and some opens of signal traces, that are suspected to be damage caused by the Ar ion etch. Future sensors will be ordered with Au pads. 
-An additional issue is that the Tracker sensor was planned to be wire bonded to its (very thin) cable. The sensor oxide layer is not strong enough to allow wire bonding without damage, and so must be solder bumped. The pad pitch is small, and solder bumping the cable will be challenging. The trouble with the wire bonding to the sensor was unexpected.
-Another concern is that the current design of KPiX has deadtime after a pixel has accepted a trigger. Only the triggered pixel is affected; all the other pixels are available for signals. This deadtime is different from the usual notion of data acquisition deadtime where the entire detector is unavailable, but the correction to the luminosity integral is easy. Finally, the buffer requirement (4 in the current version of KPiX) is being re-evaluated in SiD simulations. A possible new architecture for KPiX is in early stages of evaluation. 
-A small mechanical engineering effort has started to study the structure of the EMCal. The Sid EMCal has emphasized thin gaps between the tungsten layers to minimize the Moliere radius, and this implies that the structure is connected by columns at the vertices of the sensors. The DBD design shows hexagonal sensors, which indeed are the most efficient way of tiling large areas, but no consideration was given to the edges of these arrays. The engineering work is leading to the realization that it is probably easier and cheaper overall to use two sizes of rectangular sensors, where the two sizes can be selected to tile to the edges of the layers and even tile the endcaps reasonably. Thus it is likely that the next round of EMCal sensor prototypes will be rectangles with square pixels.
-Tracker sensors are now at IZM for the pad plating and subsequent bonding of KPiX; they will then go to UCD for cable attachment and testing.
-
-R&D Plans for the coming years:
-Assuming positive developments with Japan are announced soon, we expect the financial support to improve. It should be noted that an important effect of the withdrawal of support is that most of the US collaborators have been forced to move to other work. 
-•	EMCal Sensors: A second round of prototypes will be designed and ordered with rectangular layout; shielded traces, and Au pads.
-•	Tracker Sensors: The current prototypes will be evaluated, and if appropriate tested in a beam.
-•	KPiX: A new architecture with little (or no) deadtime will be evaluated. A decision will be made to develop this new architecture or incrementally improve the existing design.
-•	The EMCal mechanical structure will be pushed towards a conceptual design.
-Participating Institutions:
-	SLAC National Accelerator laboratory
-University of California, Davis
-University of California, Santa Cruz
-University of Oregon
-University of New Mexico
-
-
-Perspectives beyond the ILC
-	This work represents a significant step in the aggressive integration of silicon sensors with readout electronics, just short of integrating the electronics directly into the sensors. It has prompted consideration of this approach by CMS for calorimetry and by ATLAS for a muon system.  It may have applications in sensors for light sources as well as other particle physics detectors.
-
-
-\section{Time Projection Chamber}
-Input for the 'LC Detector R&D Liaison report' from Bonn
-The University of Bonn is studying the pixelized readout of a TPC for the ILD detector. The readout is based on the Timepix ASIC with a triple GEM or Micromegas based gas amplification.
-1.) Major R&D efforts (past): The first studies were based on the triple GEM setup with a single Timepix chip. This readout was mounted in a small test detector in the Bonn laboratory. Here, the working principle was tested with a long drift distance. It could be demonstrated that the transverse spatial resolution of the reconstructed primary electrons was close to the expected diffusion limit of single electrons. The results are summarized in the following publications:
-– C. Brezina et al., Operation of a GEM-TPC with pixel readout, IEEE TNS, Vol. 59, No. 6, December 2012, pp. 3221-3228
-– J. Kaminski et al., Time projection chamber with triple GEM and pixel readout, NSS Conference Record, 2008, 2926-2929
-– C. Brezina et al., A Time Projection Chamber with triple GEM and pixel readout, 2009 JINST 4 P11015
-– J. Kaminski et al., Time projection chamber with triple GEM and highly granulated pixel readout, LP 2009, Conf. Proc. C0908171 (2009) 533-535
-– P. Schade et al., A large TPC prototype for a linear collider detector, NIMA 628 (2011) 128-132
-2.) Major R&D efforts (present) and recent developments since ILC DBD
-The new focus are GridPix based detectors, where the gas amplification stage is a Micromegas produced in a postprocessing technique, which guarantees a high quality grid well aligned with the readout pixels. This approach was pioneered by NIKHEF and the University of Bonn has modified the production process together with the Fraunhofer Institut IZM so that a wafer-based production of GridPix detectors is standard by now. The new GridPixes were tested on small prototype detectors and also assembled in an 8 GridPix module for the Large Prototype detector at DESY. A successful test beam campaign was performed last year.
-– M. Lupberger, The Pixel-TPC: first results from an 8-InGrid module, 2014 JINST 9 C01033
-– W. Koppert, GridPix detectors: Production and beam test results, NIMA 732 (2013) 245–249 The current work is focused on a new LP module with about 100 GridPixes. This module is a demonstrator that larger areas (~400 cm2) can be produced and operated. It shall be tested in the LP at the beginning of next year. For this a number of challenges have to be coped with. In particular commercial readout systems are not easily scalable. This is why Bonn has developed a cheap and easily expandable system based on the Scalable Readout System (SRS) of the RD51 collaboration.
-In addition Bonn is developing the software for reconstructing and analyzing the test beam and simulation data. For this the LCTPC software framework of MarlinTPC is used.
-– J. Abernathy et al., MarlinTPC: A Common Software Framework for TPC Development, NSS conference record, 2008, 1704-1708
-Finally, Bonn also takes part in designing new pixel chips. To test the new digitization and readout techniques two test chips were designed in collaboration with N'IKHEF. Then Bonn also contributed to the design of the Timepix successor chip, Timepix3, which is being tested now:
-– A. Kruth et al., GOSSIPO-3: measurements on the prototype of a read-out pixel chip for Micro- Pattern Gaseous Detectors, 2010 JINST 5 C12005
-– C. Brezina et al., GOSSIPO-4: Evaluation of a Novel PLL-Based TDC-Technique for the Readout of GridPix-Detectors, IEEE Trans. Nucl. Sci. Vol. PP
-– Y. Fu et al., The charge pump PLL clock generator designed for the 1.56 ns bin size time-to-
-￼￼
-digital converter pixel array of the Timepix3 readout ASIC, 2014 JINST 9 C01052
-3.) Engineering challenges
-The production of a module with 100 GridPixes requires 4 main components: The production of a
-large number of GridPixes with sufficiently good quality. This has been addressed by the new production method and a large batch is being produced. The challenge of the readout is being addressed by the new readout system. Finally the distribution of the LV power to all ASICs and the cooling of the ASICs still are unclear, but since both challenges are similar for most readout electronics, standard solutions are expected to be adequate.
-4.) Detector R&D plans for the coming years
-On a short term the production of the 100 ASIC module is the main goal at Bonn. If this module has been successfully operated, we are interested in replacing the Timepix ASIC by the Timepix3 ASIC and produce GridPix detectors with this improved chip. There are also some ideas of how to improve the grid structure and make it more reliable. Finally, the reconstruction and analysis software needs further improvement and has to be extended, so that simulated data for the final TPC (i.e. 10,000 hits per track) can be studied.
-5.) List of collaborating institutes CEA Saclay
-NIKHEF
-Fraunhofer Institut IZM, Berlin
-6.) Perspectives of this R&D for applications beyond the ILC
-A single InGrid detector will be installed this year in the CAST experiment for axion search. For a CLIC-TPC a highly granular (i.e. pixelized) readout structure is mandatory to lower the occupancy.
-\section{Calorimeter R\&D}
-\subsection{Scintillator Tiles}
-\subsection{Scintillator Strips}
-\subsection{Silicon Pads}
-\subsection{Resistive Plate Chambers}
+\include{KPIX}
+\include{TPC}
+\section{Electromagnetic Calorimeter R\&D}
+\include{ScintillatorStrips}
+\include{SiliconPads}
+\section{Hadronic Calorimeter R\&D}
+\include{TileHCal}
+\include{DHCAL}
 \end{document}
