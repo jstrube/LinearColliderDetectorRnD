@@ -3,5 +3,5 @@ if [ -e /afs/cern.ch/sw/XML/texlive/latest/bin/x86_64-linux/pdflatex ]
 then
     export PATH=/afs/cern.ch/sw/XML/texlive/latest/bin/x86_64-linux/${PATH}
 fi
-latexmk -cd -e "$pdflatex=q/%E -interaction=nonstopmode %O %S/" -bibtex -silent -f -pdf
+latexmk -cd -e "$pdflatex=q/%E -interaction=nonstopmode %O %S/" -bibtex -silent -f -pdf lcDetectorRnD.tex
 
