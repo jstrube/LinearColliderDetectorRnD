@@ -1,28 +1,45 @@
 \documentclass[10pt]{article}
 \usepackage{color}
 \usepackage{graphicx}
+\usepackage[T1]{fontenc}
+%%% The next two are necessary to get the degree symbol in text and math mode
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[colorlinks=true,
+            urlcolor=cyan]{hyperref}
+\usepackage{units}
+\usepackage[type1]{libertine}
+\usepackage[libertine]{newtxmath}
+\usepackage{bm} 
+
+%%% This makes a nice upright greek mu for use in units
+\makeatletter
+\re@DeclareMathSymbol{\mu}{\mathord}{lettersA}{22}
+\makeatother
+%%% 
+\newcommand{\micron}{\ensuremath{\mu\mathrm{m}}}
 
 \begin{document}
 \section{Vertex Detector R\&D}
-\include{VertexDetector/DEPFET/DEPFET}
-\include{VertexDetector/Chronopix/Chronopix}
+\input{VertexDetector/DEPFET/DEPFET}
+\input{VertexDetector/Chronopix/Chronopix}
 \subsection{3D integration}
 
-\include{VertexDetector/FPCCD/FPCCD}
-\include{VertexDetector/CMOS/CMOS}
+\input{VertexDetector/FPCCD/FPCCD}
+\input{VertexDetector/CMOS/CMOS}
 \subsection{Support Structures}
 \subsection{BeanChip}
 
 \section{Tracking Detectors}
-\include{Tracker/SCIPPTracking/SCIPPTracking}
-\include{Tracker/KPIX/KPIX}
-\include{Tracker/TPC/TPC}
+\input{Tracker/SCIPPTracking/SCIPPTracking}
+\input{Tracker/KPIX/KPIX}
+\input{Tracker/TPC/TPC}
 \section{Electromagnetic Calorimeter R\&D}
-\include{Calorimeter/ScintillatorStrips/ScintillatorStrips}
-\include{Calorimeter/SiliconTungstenILD/SiliconPads}
+\input{Calorimeter/ScintillatorStrips/ScintillatorStrips}
+\input{Calorimeter/SiliconTungstenILD/SiliconPads}
 \section{Hadronic Calorimeter R\&D}
-\include{Calorimeter/TileHCAL/TileHCal}
-\include{Calorimeter/DHCAL/DHCAL}
-\include{Calorimeter/GEM_HCAL/GEM_HCAL}
-\include{Calorimeter/FCAL/FCAL}
+\input{Calorimeter/TileHCAL/TileHCal}
+\input{Calorimeter/DHCAL/DHCAL}
+\input{Calorimeter/GEM_HCAL/GEM_HCAL}
+\input{Calorimeter/FCAL/FCAL}
 \end{document}
