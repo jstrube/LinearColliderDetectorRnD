@@ -2,20 +2,20 @@
 \subsubsection{Collaborating Institutions}
 The AHCAL effort is organized with a reasonable degree of task sharing. The table below lists the participating institutes and their main fields of activity:
 \begin{description}
-\item[DESY]   steel structures, electronics and integration, test beam support, software, project management
-\item[Hamburg]    SiPMs and tile optimisation, test beam and commissioning with DESY 
-\item[Heidelberg]     high gain ASICs, SiPM mass tests and characterisation  
+\item[DESY] steel structures, electronics and integration, test beam support, software, project management
+\item[Hamburg] SiPMs and tile optimisation, test beam and commissioning with DESY 
+\item[Heidelberg] high gain ASICs, SiPM mass tests and characterisation  
 \item[MPI Munich] SiPM development, tile optimisation, cassettes, fast timing
-\item[Wuppertal]  embedded LED electronics and test stands
-\item[Mainz]  DAQ central components, AHCAL data concentrator, mass production
-\item[Omega]  SPIROC ASICs 
-\item[CERN]   tungsten absorber, testbeam and Geant4 support 
-\item[ITEP]       tiles and SiPMs, test bench characterisation
-\item[MEPHI]  SiPM development
-\item[Dubna]  power supplies and distribution 
-\item[Prague]     fibre based LED system, temperature compensation 
-\item[NIU]        alternative SiPM coupling, DAQ interface 
-\item[Bergen]     calibration studies, temperature compensation
+\item[Wuppertal] embedded LED electronics and test stands
+\item[Mainz] DAQ central components, AHCAL data concentrator, mass production
+\item[Omega] SPIROC ASICs 
+\item[CERN] tungsten absorber, testbeam and Geant4 support 
+\item[ITEP] tiles and SiPMs, test bench characterisation
+\item[MEPHI] SiPM development
+\item[Dubna] power supplies and distribution
+\item[Prague] fibre based LED system, temperature compensation
+\item[NIU] alternative SiPM coupling, DAQ interface
+\item[Bergen] calibration studies, temperature compensation
 \item[Shinshu] scintillator strip alternative, photo-sensors
 \end{description}
 \subsubsection{Introduction}
@@ -28,27 +28,29 @@ The development of engineering solutions for a realistic detector is on its way.
 \subsubsection{Recent Milestones}
 Past and present R\&D: test beam data analysis
 
-The following results using data taken the first AHCAL “physics” prototype in 2006 – 2011 at CERN and Fermilab have been published in peer-reviewed journals: 
-
-1.  Detector construction, noise and ageing studies  
-2.  Electromagnetic linearity and resolution  
-3.  Hadronic linearity and resolution, software compensation   
-4.  Test of particle flow algorithms (AHCAL with SiW ECAL)  
-5.  Studies using a scintillator SiPM based tail catcher  
-6.  Geant 4 validation with pion showers  
-7.  Geant 4 validation with tungsten absorber (low energy)  
-8.  Imaging capabilities, track segments  
+The following results using data taken the first AHCAL ``physics'' prototype in 2006 -- 2011 at CERN and Fermilab have been published in peer-reviewed journals:
+\begin{enumerate}
+\item Detector construction, noise and ageing studies  
+\item Electromagnetic linearity and resolution  
+\item Hadronic linearity and resolution, software compensation   
+\item Test of particle flow algorithms (AHCAL with SiW ECAL)  
+\item Studies using a scintillator SiPM based tail catcher  
+\item Geant 4 validation with pion showers  
+\item Geant 4 validation with tungsten absorber (low energy)  
+\item Imaging capabilities, track segments  
+\end{enumerate}
 
 We consider all of them as critical for validating a given HCAL technology. Papers 6, 7 and 8 appeared in the last year since the ILC TDR was handed over. 
 
 Preliminary results have been made public in the form of CALICE analysis notes after intense internal reviewing on the following topics:
-
-1.  Combined performance SiW ECAL + AHCAL + Tail Catcher   
-2.  Leakage estimation using shower topology  
-3.  Time structure of showers in Fe and W  
-4.  Geant 4 validation with protons   
-5.  Parameterisation of pion and proton shower shapes 
-6.  Geant 4 validation with tungsten absorber (high energy)  
+\begin{enumerate}
+\item Combined performance SiW ECAL + AHCAL + Tail Catcher   
+\item Leakage estimation using shower topology  
+\item Time structure of showers in Fe and W  
+\item Geant 4 validation with protons   
+\item Parameterisation of pion and proton shower shapes 
+\item Geant 4 validation with tungsten absorber (high energy)
+\end{enumerate}
 
 Notes 4, 5 and 6 appeared in the last year since the release of the ILC TDR. The studies are actively been followed up towards final publication; only the leakage study is presently uncovered due to lack of manpower. 
 
@@ -68,11 +70,11 @@ In the time since the TDR, tile SiPM cells without wave-length shifting fibre ha
 
 Industrialisation of the SiPM and tile design and production procedures is a long-standing item, but tests with industrial facilities such as automatic pick-and-place machines have begun only recently (Mainz). This needs to be continued in the coming years, fed back into the cell optimisation, and awaits a feasibility demonstration at larger scale. 
 
-An alternative design, with photo-sensors integrated in the read-out electronics board, has been proposed some time ago (Northern Illinois), but the detailed development of the corresponding sensor and scintillator configuration has only recently been taken up again (NIU, Mainz, ITEP). It has the potential to result in further simplifications (which should be read as cost and time savings), but poses higher performance requirements to the SiPM and raises new issues in the quality assurance and integration chain. The goal is to develop such an alternative solution in the next 2-3 years.
+An alternative design, with photo-sensors integrated in the read-out electronics board, has been proposed some time ago (Northern Illinois), but the detailed development of the corresponding sensor and scintillator configuration has only recently been taken up again (NIU, Mainz, ITEP). It has the potential to result in further simplifications (which should be read as cost and time savings), but poses higher performance requirements to the SiPM and raises new issues in the quality assurance and integration chain. The goal is to develop such an alternative solution in the next 2--3 years.
  
 2.  Electronics and active layer integration
 
-The design of the active layers (DESY) with integrated read-out ASICs (LAL/OMEGA) and calibration system (Wuppertal) has been basically validated in beam tests of a single HCAL layer consisting of four base units (HBUs) at CERN in 2012 and reported in the TDR. An HBU reads 12x12 tiles with 4 ASICs. The present ASIC belongs to the 2nd generation ROC family used also in ECAL and SDHCAL. An HCAL layer carries interfaces for DAQ, calibration and power supply, which already have a compact design fulfilling space constraints at an ILC detector. 
+The design of the active layers (DESY) with integrated read-out ASICs (LAL/OMEGA) and calibration system (Wuppertal) has been basically validated in beam tests of a single HCAL layer consisting of four base units (HBUs) at CERN in 2012 and reported in the TDR. An HBU reads $12 \times 12$ tiles with 4 ASICs. The present ASIC belongs to the 2nd generation ROC family used also in ECAL and SDHCAL. An HCAL layer carries interfaces for DAQ, calibration and power supply, which already have a compact design fulfilling space constraints at an ILC detector. 
 
 The main difference between the integrated electronics and that of the physics prototype is the self-triggered operation and on-detector zero-suppression, which implies much higher demands on controlling the noise behaviour and ensuring a stable detector response. It is thus mandatory to re-establish the calorimeter performance with a full-scale beam test. However, this is out of reach with present funding levels. 
 
@@ -98,7 +100,7 @@ On the mechanical side, a cooling system needs to be developed. The ASICs integr
 
 The AHCAL is probably the sub-detector with the largest number of individual components. While the number of electronics boards, layers and interfaces is similar to other ECAL or HCAL options, the large quantity of tiles and SiPMs deserves special attention. This affects production and quality assurance, but also characterisation, i.e. test bench measurements of parameters to be used later for calibration purposes.  
 
-While it would be premature to discuss building up full production infra-structure, conceptual solutions need to be developed and exercised using demonstrators, which could be seen as prototypes of future installations. The demonstration requires reasonably large samples of detector elements, in the order of 10’000, as they would be needed for a next generation full prototype. 
+While it would be premature to discuss building up full production infra-structure, conceptual solutions need to be developed and exercised using demonstrators, which could be seen as prototypes of future installations. The demonstration requires reasonably large samples of detector elements, in the order of 10000, as they would be needed for a next generation full prototype. 
 
 A semi-automatic test stand for SiPMs and tiles has been developed at Heidelberg and used for the elements of the early 2014 beam test. It needs to be adapted for future designs, e.g. with SiPMs integrated in the PCB. 
 
@@ -114,49 +116,65 @@ As enough active elements become available for instrumenting several active laye
 
 \subsubsection{Summary}
 The AHCAL effort has produced a number of significant results in the time since the ILC TDR: 
-•   Publication of 3 journal papers and 3 preliminary results in the form of internally reviewed notes, on Geant 4 validation with pions and protons in steel and tungsten, including new observables like track segments
-•   Development, production and beam test of a new, simplified tile SiPM system without wave-length shifting fibres and improved sensor performance
-•   Test with electron beams of a small stack with second generation electronics and DAQ in a realistic absorber structure
+\begin{itemize}
+\item Publication of 3 journal papers and 3 preliminary results in the form of internally reviewed notes, on Geant 4 validation with pions and protons in steel and tungsten, including new observables like track segments
+\item Development, production and beam test of a new, simplified tile SiPM system without wave-length shifting fibres and improved sensor performance
+\item Test with electron beams of a small stack with second generation electronics and DAQ in a realistic absorber structure
+\end{itemize}
 
 The AHCAL is ready to make the next step towards a realistic full-scale prototype and a technical design report. In order to achieve this, coordinated R\&D is required in the following areas:
 
 Software and analysis:
-•   Completion of physics prototype test beam analysis 
-•   2nd generation prototype reconstruction and simulation software 
-•   Development of timing reconstruction
-•   Analysis of 2nd generation test beam data 
+\begin{itemize}
+\item Completion of physics prototype test beam analysis 
+\item 2nd generation prototype reconstruction and simulation software
+\item Development of timing reconstruction
+\item Analysis of 2nd generation test beam data 
+\end{itemize}
 
 Tile SiPM system:
-•   Development of scintillator SiPM system with SiPM on the PCB
-•   Development of associated assembly, quality assurance and characterisation procedures
-•   Development of associated PCB
+\begin{itemize}
+\item Development of scintillator SiPM system with SiPM on the PCB
+\item Development of associated assembly, quality assurance and characterisation procedures
+\item Development of associated PCB
+\end{itemize}
 
 Electronics:
-•   3rd generation ASIC of ROC family
-•   ASIC for larger range of SiPM gains
-•   PCB cost optimisation 
+\begin{itemize}
+\item 3rd generation ASIC of ROC family
+\item ASIC for larger range of SiPM gains
+\item PCB cost optimisation 
+\end{itemize}
 
 System integration:
-•   Scalable DAQ
-•   Module level data collector
-•   Integration of DAQ and slow control into higher level system
-•   Implementation of temperature compensation scheme
-•   Power supply system
-•   Cooling system
+\begin{itemize}
+\item Scalable DAQ
+\item Module level data collector
+\item Integration of DAQ and slow control into higher level system
+\item Implementation of temperature compensation scheme
+\item Power supply system
+\item Cooling system
+\end{itemize}
 
 Mass production concepts:
-•   Semi-automatic test stands
-•   Automatic placement and soldering of tiles and SiPMs
+\begin{itemize}
+\item Semi-automatic test stands
+\item Automatic placement and soldering of tiles and SiPMs
+\end{itemize}
 
 Absorber structure:
-•   Earthquake stability calculations and tests
-•   Thermal tests with full-scale instrumented and powered structures  
+\begin{itemize}
+\item Earthquake stability calculations and tests
+\item Thermal tests with full-scale instrumented and powered structures  
+\end{itemize}
 
 There are ample opportunities for new groups to join into any of these fields, depending on the special competences they wish to contribute. 
 
-Particular engineering challenges are 
-•   Assess and ensure earthquake stability of the absorber structure whilst maintaining a minimum of dead material
-•   Developing an active layer element consisting of tiles, SiPMs and readout electronics that can be automatically assembled, including production and quality assurance procedures
+Particular engineering challenges are
+\begin{itemize}
+\item Assess and ensure earthquake stability of the absorber structure whilst maintaining a minimum of dead material
+\item Developing an active layer element consisting of tiles, SiPMs and readout electronics that can be automatically assembled, including production and quality assurance procedures
+\end{itemize}
 
 \subsubsection{Engineering Challenges}
 \subsubsection{Future Plans}
