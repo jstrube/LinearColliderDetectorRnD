@@ -12,6 +12,7 @@
 \usepackage[type1]{libertine}
 \usepackage[libertine]{newtxmath}
 \usepackage{bm} 
+\usepackage[sectionbib]{chapterbib}
 
 %%% This makes a nice upright greek mu for use in units
 \makeatletter
@@ -22,6 +23,7 @@
 
 \begin{document}
 \tableofcontents
+\bibliographystyle{plain}
 \section{Vertex Detector R\&D}
 \input{VertexDetector/DEPFET/DEPFET}
 \input{VertexDetector/Chronopix/Chronopix}
@@ -30,17 +32,21 @@
 \input{VertexDetector/CLICPIX/CLICPix}
 \input{VertexDetector/VIP/VIP}
 \input{VertexDetector/SOI/SOI}
+\bibliography{detectorRnD}
 \section{Tracking Detectors}
 \input{Tracker/SCIPPTracking/SCIPPTracking}
 \input{Tracker/KPIX/KPIX}
 \input{Tracker/TPC/TPC}
+\bibliography{detectorRnD}
 \section{Electromagnetic Calorimeter R\&D}
 \input{Calorimeter/ScintillatorStrips/ScintillatorStrips}
 \input{Calorimeter/SiliconTungstenILD/SiliconPads}
+\bibliography{detectorRnD}
 \section{Hadronic Calorimeter R\&D}
 \input{Calorimeter/TileHCAL/TileHCal}
 \input{Calorimeter/DHCAL/DHCAL}
 \input{Calorimeter/GEM_HCAL/GEM_HCAL}
 \input{Calorimeter/FCAL/FCAL}
 \input{Calorimeter/AHCAL/AHCAL}
+\bibliography{detectorRnD}
 \end{document}
