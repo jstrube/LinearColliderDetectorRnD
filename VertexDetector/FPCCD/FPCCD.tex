@@ -1,5 +1,5 @@
-\subsection{FPCCD}
-\subsubsection{Collaborating Institutions}
+\section{FPCCD}
+\subsection{Collaborating Institutions}
 The following institutes are participating in this project:
 \begin{itemize}
     \item KEK, High Energy Accelerator Research Organization
@@ -7,10 +7,10 @@ The following institutes are participating in this project:
     \item Shinshu University
     \item JAXA, Japan Aerospace Exploration Agency
 \end{itemize}
-\subsubsection{Introduction}
+\subsection{Introduction}
     Fine pixel CCD (FPCCD) is one of the candidate sensor options for the vertex detector of ILD detector at ILC. In the present design, FPCCD sensors for the innermost layer of the vertex detector have the pixel size of \unit[5]{\micron} and the fully depleted epitaxial layer with a thickness of \unit[15]{\micron}. Because of the small size of the pixels, the pixel occupancy is acceptably low even if the hits are accumulated for one bunch train (\unit[~1]{ms}). 
     The efforts of the FPCCD collaboration are currently focused on pixel characterization and development, while we also pursue developments to the cooling system (led by KEK), electronics downstream of ASICs (led by Shinshu University) and the reconstruction software (led by Tohoku University).
-\subsubsection{Recent Milestones}
+\subsection{Recent Milestones}
 R\&D activity for the FPCCD vertex detector at present is mainly focused on FPCCD sensors and a detector cooling system using 2-phase $\text{CO}_2$.  
 One of the achievements of FPCCD sensors after DBD is the fabrication of real size ($12.3 \times \unit[62.4]{\mathrm{m}^2}$) sensors with \unit[50]{\micron} total thickness. Figure~\ref{fig:FPCCD:realSizeSensor} shows the real size prototype sensor. It has 8 readout nodes, and each channel has different pixel sizes of \unit[12]{\micron}, \unit[8]{\micron}, and \unit[6]{\micron}.
 \begin{figure}
@@ -18,7 +18,7 @@ One of the achievements of FPCCD sensors after DBD is the fabrication of real si
     \caption{Real size FPCCD sensor thinned down to \unit[50]{\micron}}
     \label{fig:FPCCD:realSizeSensor}
 \end{figure}
-We have started neutron damage test using small ($\unit[6]{mm}\times\unit[6]{mm}$) FPCCD prototypes [1]. A prototype sensor was irradiated by a neutron beam of few tens of MeV at CYRIC in Tohoku University. Detailed analysis on the irradiated sensor is still on-going. 
+We have started neutron damage test using small ($\unit[6]{mm}\times\unit[6]{mm}$) FPCCD prototypes~\cite{lcws:fpccd:ito:2013}. A prototype sensor was irradiated by a neutron beam of few tens of MeV at CYRIC in Tohoku University. Detailed analysis on the irradiated sensor is still on-going. 
 In order to increase the radiation immunity of FPCCD sensors, particularly to reduce the transfer inefficiency due to radiation damage, the sensors should be cooled down to \unit[-40]{\degree C}. We have started R\&D on two-phase $\text{CO}_2$ cooling system for this purpose. There are several examples of utilizing two-phase $\text{CO}_2$ cooling system for high energy physics experiments. For these cases, the $\text{CO}_2$ coolant is circulated using liquid pumps. This method is, however, not so efficient for very low temperature cooling of \unit[-40]{\degree C}. Therefore, we adopted $\text{CO}_2$ gas compressor for the circulation of $\text{CO}_2$ coolant. Figure~\ref{fig:FPCCD:coolingSystemSchematic} shows a simplified schematic diagram of the system. A prototype system has been constructed, and cooling between \unit[-40]{\degree C} and \unit[+15]{\degree C} has been successfully demonstrated using this system.
 \begin{figure}
     \includegraphics[width=\textwidth]{VertexDetector/FPCCD/coolingSystemSchematic.png}
@@ -26,11 +26,11 @@ In order to increase the radiation immunity of FPCCD sensors, particularly to re
     \label{fig:FPCCD:coolingSystemSchematic}
 \end{figure}
 
-\subsubsection{Engineering Challenges}
+\subsection{Engineering Challenges}
     In the present design of ILD vertex detector, two sensor layers are mounted on both sides of a light-weight ladder of ~2 mm thick. Our goal of the material budget of this ladder is 0.3\% X0/ladder = 0.15\% X0/layer. This goal would not be so easy, and we need a lot of R\&D effort.
     The ladders have to be cooled down to \unit[-40]{\degree C}. We plan to achieve this cooling by heat conduction to the end-plate on which thin cooling tubes for 2-phase $\text{CO}_2$ are attached. The design of this structure is not trivial, and we need R\&D including thermal simulation.
     There are challenges both in mechanical structure and in electronics circuit for the ladder R\&D. We have not started this effort yet.
-\subsubsection{Future Plans}
+\subsection{Future Plans}
     We have been doing our R\&D on the FPCCD vertex detector based on a Grant-in-aid for science research which expires at the end of FY2015. By that time, we plan to carry out the following R\&D items:
 \begin{itemize}
     \item Characterization of FPCCD sensors including beam tests and radiation damage tests
@@ -45,8 +45,7 @@ If new funding is secured in future, the following R\&D items have to be done:
     \item Construction of real size engineering prototype and its cooling test
 \end{itemize}
 
-\subsubsection{Applications Outside of Linear Colliders}
+\subsection{Applications Outside of Linear Colliders}
     Because of the relatively slow readout speed, application of FPCCD sensors to other high energy physics would be limited. However, high spatial resolution of small pixel size must be applicable to measurements of X-ray imaging in material science. 
     Two-phase $\text{CO}_2$ cooling system can be applied to any other detectors which require efficient cooling between \unit[-40]{\degree C} and near room temperature. Our system, which uses a $\text{CO}_2$ gas compressor, has great advantage for low temperature operation near \unit[-40]{\degree C} compared with systems using liquid pumps for circulation.
-
 

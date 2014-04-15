@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[10pt]{report}
 \usepackage{color}
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.png,.pdf}
@@ -12,8 +12,8 @@
 \usepackage[type1]{libertine}
 \usepackage[libertine]{newtxmath}
 \usepackage{bm} 
-\usepackage[sectionbib]{chapterbib}
-
+\usepackage{bibentry}
+\nobibliography*
 %%% This makes a nice upright greek mu for use in units
 \makeatletter
 \re@DeclareMathSymbol{\mu}{\mathord}{lettersA}{22}
@@ -24,7 +24,7 @@
 \begin{document}
 \tableofcontents
 \bibliographystyle{plain}
-\section{Vertex Detector R\&D}
+\chapter{Vertex Detector R\&D}
 \input{VertexDetector/DEPFET/DEPFET}
 \input{VertexDetector/Chronopix/Chronopix}
 \input{VertexDetector/FPCCD/FPCCD}
@@ -32,17 +32,14 @@
 \input{VertexDetector/CLICPIX/CLICPix}
 \input{VertexDetector/VIP/VIP}
 \input{VertexDetector/SOI/SOI}
-\bibliography{detectorRnD}
-\section{Tracking Detectors}
+\chapter{Tracking Detectors}
 \input{Tracker/SCIPPTracking/SCIPPTracking}
 \input{Tracker/KPIX/KPIX}
 \input{Tracker/TPC/TPC}
-\bibliography{detectorRnD}
-\section{Electromagnetic Calorimeter R\&D}
+\chapter{Electromagnetic Calorimeter R\&D}
 \input{Calorimeter/ScintillatorStrips/ScintillatorStrips}
 \input{Calorimeter/SiliconTungstenILD/SiliconPads}
-\bibliography{detectorRnD}
-\section{Hadronic Calorimeter R\&D}
+\chapter{Hadronic Calorimeter R\&D}
 \input{Calorimeter/TileHCAL/TileHCal}
 \input{Calorimeter/DHCAL/DHCAL}
 \input{Calorimeter/GEM_HCAL/GEM_HCAL}
