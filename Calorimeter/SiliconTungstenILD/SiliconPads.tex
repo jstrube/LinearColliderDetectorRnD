@@ -44,3 +44,52 @@ To recall, all the R\&D will stop at the end of 2016, if there is no decision in
 	\item CEPC, TLEP and directly today on CMS upgrade
 	\item The compact Silicon-W design has been used in the PAMELA satellite (very similar to physics prototype)
 \end{itemize}
+
+\section{SiliconPads LAL}
+\subsection{Introduction and Physics Prototype}
+Precision measurements at the Linear Collider require highly granular calorimeters. The activities at LAL are focalised on the R\&D for a highly granular silicon tungsten calorimeter. The work is conducted in the framework of the international collaboration CALICE. A prototype called ``Physics Prototype'' has been operated with success in the years 2004--2011 and has been the subject of large scale test beam campaigns at DESY, CERN at FNAL.. The engineers of the microelectronics group OMEGA of LAL (until 2013) have conceived the ASICs for this prototype as well as for a number of other prototypes, e.g. electromagnetic and hadronic calorimeters with scintillating tiles or strips.
+The LAL has assured the coordination of the beam test campaigns in 2007, 2008 and 2011. A publication based on data recorded in 2007 has been published in 2011~\cite{Adloff201197}. This publication gives confidence that embedding the front end electronics into the calorimeter layers does not compromise the detector performance. A second publication on the interaction of hadrons in the Ecal based on the 2008 is about to be published in a peer reviewed journal. This publication started out from the CALICE Analysis Note CAN-025~\cite{Adloff:CAN025}.
+
+\subsection{Technological Prototype}
+The work is now oriented versus the construction of a technological prototype. The front end ASICS, called SKIROC2, have been realised by OMEGA. Again it is has to be pointed that here a e horizontal approach of the ASIC development has been followed since similar ASICs has been realised for analog and semi-digital highly granular electromagnetic and hadron calorimeters. An overview on the ASICs produced for recent prototypes is given in Table~\ref{tab:LALElectronics}.
+\begin{table}
+\caption{ASICs produced for recent prototypes of highly granular calorimeters. Note that variants of these ASICs are used in Earth Sciences (PARISROC) and Space Applications (SPACIROC).}
+\label{tab:LALElectronics}
+\begin{tabular}{|c|c|c|}
+	\hline
+	ASIC & Detector & produced quantities \\
+	\hline
+	SKIROC~\cite{1748-0221-6-12-C12040} & SiW ECal & 1000 \\
+	HADROC~\cite{5874060} & GRPC-SDHCAL & 9000 \\
+	MICROPROC~\cite{1748-0221-7-01-C01029} & Micromega-SDHCAL & 350 \\
+	SPIROC~\cite{1748-0221-8-01-C01027} & Analog HCal and Scintillator ECal & 1000 \\
+	\hline
+\end{tabular}
+\end{table}
+The SKIROC ASIC will be embedded into the calorimeter layers and mounted on 9 layer PCBs that will be as thin as 1.5mm. Silicon wafers the PCB and the 16 mounted circuits constitute the Active Signal Units or ASUs. Up to ten of these ASUs will be assembled to- gether to form a calorimeter layer. The technology of the interconnection has been developed at LAL and applied with success to first units of the technological prototype.
+A series of beam tests with simplified ASUs have been carried out in the years 2012 and 2013 at DESY. The LAL has organised these beam tests as well as have assured the coordination of the data taking. The analysis of these data validated the concept of the front end electronics but will also allow for correcting a small number of shortcomings of the SKIROCs ASIC. These will be corrected in the version SKIROC2b that is supposed to be produced at the end of 2014. A paper on the analysis of the 2012 data has been submitted to JINST in March 2014~\cite{Rouene2013470}[8].
+Particularly in summer 2013 (i.e. Post-DBD phase), the SKIROC ASIC has been operated in power pulsed mode. For this bias currents of the ASIC are shut down and raised with a given frequency (5Hz for ILC, 10Hz in our beam tests). The good agreement between the MIP spectra obtained in power pulsed and conventional mode (see e.g. [9]) give confidence that this technology can indeed be applied for a calorimeter at a linear collider and more precisely at the ILC. More studies are needed as the technological prototype grows in size.
+After the departure of the OMEGA group from LAL the development of microelectronics at LAL has been stopped. A new institute with the same name, i.e. OMEGA, has been created by the IN2P3 and is hosted at the Ecole Polytechnique. The ILC group at LAL will continue to collaborate with the new institute. The details will however have to be sorted out under the new circumstances. It is maybe still worthwhile to say that for the next it is planned to first produce the debugged version SKIROC2b (see above) and then the version SKIROC3. The latter will comprise all the features needed for an ASIC.
+\subsection{Plans of the near future - Ecal assembly bench and R\&D on digital electronics}
+The different units of the SiW Ecal for the ILD detector need to be assembled into detector layers of up to two meter in length comprising up to 10 detection units dubbed ASUs. For this we propose to develop an assembly line, incorporating the reception and the test of the material, the alignment of the ASUs and the interconnection, with a continuous monitoring for quality control purposes. The deliverable is a still manual assembly bench capable for a small production of layers. Based on the manual assembly bench we will propose an automatised system for mass assembly together with industrial partners. A survey to search for partners is part of the proposal. A goal is to design the system such that it can be easily duplicated at other sides. In the ideal case the assembly bench is versatile enough to reply to needs for other detector systems than ILD (e.g. CMS). Relevant data recorded during the assembly process can for example stored in a database. The tools for efficient storage and retrieving data and information about detector components can be developed in collaboration with other proposals aiming at the mass production of calorimeter elements and/or benefit from similar tools developed e.g. for the XFEL project. This project might become a task within the calorimeter package of the AIDA2 project.
+
+The departure of the OMEGA group requires re-orientation of the LAL contribution to detector electronics. The LAL has recognised competences in digital electronics. It is considered to embark on the R\&D for DAQ systems for linear collider detectors. Details will be worked during 2014. It is envisaged to make this work part of the calorimeter package of the AIDA2 project.
+
+\subsection{Further Activities}
+Although not explicitly asked it is worthwhile to point out that the LAL plays also a role in the integration of the ILD detector. Notably the engineers are in charge of validating the CAD Models of the sub-detectors before they come part of the official ILD database. It can be expected that this activity increases in importance when the ILC will move towards a real project.
+
+Finally, since 2012 there is a collaboration with the AppStat group of LAL. The aim of this collaboration is to develop algorithms based on machine learning techniques to assure an optimal separation of particle showers in highly granular calorimeters.
+\begin{figure}
+	\centering
+	\includegraphics[width=.5\textwidth]{Calorimeter/SiliconTungstenILD/LAL_OrgChart}
+	\caption{Structure of the FLC group at LAL as of April 2014.}
+	\label{fig:Calorimeter:LALOrgchart}
+\end{figure}
+\subsection{Funding, Manpower and Partners}
+We have a sustained funding through the French IN2P3 that sums up to around 30 kEUR/year (Material and travel funds). Between 2011 and 2014 additional funding came through a French ANR contract (around 110kEUR, partner of the LLR). The latter allowed for fi- nancing 2/3 of a PhD thesis. Finally there is a two years PostDoc grant (shared with the LLR) through the excellence cluster P2IO. Funding through AIDA allowed for developing the next generation of ASICs but meanwhile the money has been transferred to the new IN2P3 institute OMEGA.
+Figure~\ref{fig:Calorimeter:LALOrgchart} summarizes the manpower situation as of April 2014 Please note however that in particular the engineers do not work 100\% on ILC matters. Their contribution is 30\% on average. As said above considerations are ongoing to increase the engineering effort in the coming months.
+The activities of LAL are well embedded in the international collaboration CALICE as well as is in the ILD detector concept.
+On the Ecal R\&D the main partners are the LLR/Palaiseau and OMEGA/Palaiseau. To this adds in France the LPNHE/Paris, LPSC/Grenoble. On the international level we collaborate with the University of Tokyo, the University of Kyushu and  the SKKU (Suwon, Korea).
+\section{Missing References}
+[8] SiW Ecal group within CALICE, T. Frisson et al., “Beam test performance of the SKIROC2 ASIC” Internal CALICE Note CIN-023 (2013) . https://twiki.cern.ch/twiki/pub/CALICE/CaliceInternalNotes/CIN-023.pdf.
+[9] http://indico.uni-giessen.de/indico/contributionDisplay.py?sessionId=32\&contribId= 98\&confId=164.
