@@ -24,6 +24,24 @@
 %%%
 \newcommand{\micron}{\ensuremath{\mu\mathrm{m}}}
 
+\DeclareBibliographyDriver{caliceanalysisnote}{%
+    \printnames{author}%
+    \newunit\newblock
+    \printfield{title}%
+    \newunit\newblock
+    \printfield{url}%
+    \finentry%
+}
+
+\DeclareBibliographyDriver{presentation}{%
+    \printnames{author}%
+    \newunit\newblock
+    \printfield{conference}%
+    \newunit
+    \printfield{year}%
+    \finentry%
+}
+
 \begin{document}
 \tableofcontents
 \chapter{Vertex Detector R\&D}
@@ -31,9 +49,9 @@
 \input{VertexDetector/Chronopix/Chronopix}
 \input{VertexDetector/FPCCD/FPCCD}
 \input{VertexDetector/CMOS/CMOS}
-\input{VertexDetector/CLICPIX/CLICPix}
 \input{VertexDetector/VIP/VIP}
 \input{VertexDetector/SOI/SOI}
+\input{VertexDetector/CLICPIX/CLICPix}
 \chapter{Tracking Detectors}
 \input{Tracker/SCIPPTracking/SCIPPTracking}
 \input{Tracker/KPIX/KPIX}
