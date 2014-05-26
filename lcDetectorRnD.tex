@@ -2,7 +2,10 @@
 \usepackage{color}
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.png,.pdf}
+% want latin-1 character set in output
 \usepackage[T1]{fontenc}
+% want to use utf8 character set in input, useful for copy and paste from pdf
+\usepackage[utf8]{inputenc}
 %%% The next two are necessary to get the degree symbol in text and math mode
 \usepackage{textcomp}
 \usepackage{gensymb}
@@ -11,19 +14,18 @@
 \usepackage{units}
 \usepackage[type1]{libertine}
 \usepackage[libertine]{newtxmath}
-\usepackage{bm} 
-\usepackage{bibentry}
-\nobibliography*
+\usepackage{bm}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{detectorRnD.bib}
 %%% This makes a nice upright greek mu for use in units
 \makeatletter
 \re@DeclareMathSymbol{\mu}{\mathord}{lettersA}{22}
 \makeatother
-%%% 
+%%%
 \newcommand{\micron}{\ensuremath{\mu\mathrm{m}}}
 
 \begin{document}
 \tableofcontents
-\bibliographystyle{plain}
 \chapter{Vertex Detector R\&D}
 \input{VertexDetector/DEPFET/DEPFET}
 \input{VertexDetector/Chronopix/Chronopix}
@@ -46,5 +48,5 @@
 \input{Calorimeter/AHCAL/AHCAL}
 \input{Calorimeter/SDHCAL/SDHCAL}
 \input{Calorimeter/DualReadout/DualReadout}
-\bibliography{detectorRnD}
+\printbibliography
 \end{document}

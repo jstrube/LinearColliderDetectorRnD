@@ -1,16 +1,38 @@
 \section{DEPFET Pixel Sensors}
-\subsection{Collaborating Institutions}
-Three Spanish institutes are members of the collaboration
-\begin{description}
-\item[IFCA]{environmental monitoring using Bragg fibres}
-\item[IFIC]{contact to (I)LC community, thermo-mechanical properties, assembly of ladders for Belle II}
-\item[UB]{design of read-out electronics}
-\end{description}
+% \subsection{Collaborating Institutions}
+% Three Spanish institutes are members of the collaboration
+% \begin{description}
+% \item[IFCA]{environmental monitoring using Bragg fibres}
+% \item[IFIC]{contact to (I)LC community, thermo-mechanical properties, assembly of ladders for Belle II}
+% \item[UB]{design of read-out electronics}
+% \end{description}
+
 \subsection{Introduction}
 DEPFET active pixel sensors are one of most mature candidates for the ILC vertex detector and the innermost disks of the forward tracker.
+
+\begin{table}
+\centering
+\caption{Comparison of ILC and Belle II requirements of a vertex detector}
+\label{tab:Vertex:DEPFET:ILCBelleComparison}
+\begin{tabular}{ccc}
+    & ILC & Belle II \\
+    \hline
+    occupancy & 0.13 hits/$\micron^2$/s & 0.4 hits/$\micron^2$/s \\
+    radiation & $< \unit[100]{krad/yr}$ & $> \unit[1]{Mrad/yr}$  \\
+    & $\unit[10^{11}]{MeV n_{eq}/yr}$ & $2\times \unit[10^{12}]{MeV n_{eq}/yr}$ \\
+    duty cycle & 1/200 & 1 \\
+    frame time & $25-\unit[100]{\upmu s} $ & $\unit[20]{\upmu s}$ \\
+    momentum range & 100 keV - 500 GeV & $ < ~\unit[1]{GeV}$ \\
+    angular acceptance & 6\degree - 174\degree & 17\degree - 150\degree \\
+    spatial resolution & excellent: $3-\unit[5]{\micron}$ & moderate \\
+    pixel size & $20\times \unit[20]{\micron}$ & $50\times \unit[75]{\micron}$ \\
+    material budget & 0.15\% $X_0$/layer & 0.21\% $X_0$/layer \\
+\end{tabular}
+\end{table}
+
 \subsection{Recent Milestones}
 The concept of a DEPFET active pixel detector for vertex detection at collider experiments was initiated in the linear collider community (for TESLA).
-The operation principle was extensively proven on small-scale prototypes. A recent reassessment of the DEPFET potential for a linear collider at the energy frontier is found in ~\cite{6484214}.
+The operation principle was extensively proven on small-scale prototypes. A recent reassessment of the DEPFET potential for a linear collider at the energy frontier is found in~\cite{6484214}.
 The collaboration is making rapid progress - fueled by the election of DEPFET for the Belle II detector - towards a full-blown detector system including solutions for services and supports.
 A full-scale, 75 micron thin Belle II ladder was successfully submitted to a test in a beam of charged at DESY in January 2014.
 
@@ -28,7 +50,7 @@ Currently, the construction of the Belle II vertex detector (to be installed by 
 \item The test of the last version of the DHP chips
 \end{itemize}
 In the near future we hope to characterize the performance of ILC-design prototypes with
-pixels of 20 x 20 micron2:
+pixels of $20 \times \unit[20]{\micron^2}$
 \begin{itemize}
 \item Perform an engineering design for a DEPFET all-silicon module with the required petal geometry
 \item A detailed characterization of the response of the device
@@ -38,8 +60,8 @@ pixels of 20 x 20 micron2:
 The election of DEPFET technology for the Belle II detector therefore represents an important spin-off of linear collider detector R\&D. DEPFET detectors are furthermore used for X-ray imaging at the XFEL. Future space missions envisage the use of DEPFET sensors. Their use in microscopy is being studied.
 
 \section{DEPFET Electronics}
-\subsection{Collaborating Institutions}
-UB and U. Bonn
+% \subsection{Collaborating Institutions}
+% UB and U. Bonn
 \subsection{Introduction}
 \subsection{Recent Milestones}
 The Front-end Electronics (FE), i.e., readout electronics, is currently organized by a set of several ASICs: The SWITCHER, DCD and DHP chips~\cite{Krueger2010337}.
