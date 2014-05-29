@@ -1,14 +1,28 @@
 \section{DEPFET Pixel Sensors}
-% \subsection{Collaborating Institutions}
-% Three Spanish institutes are members of the collaboration
-% \begin{description}
-% \item[IFCA]{environmental monitoring using Bragg fibres}
-% \item[IFIC]{contact to (I)LC community, thermo-mechanical properties, assembly of ladders for Belle II}
-% \item[UB]{design of read-out electronics}
-% \end{description}
+
+\subsection{The DEPFET Collaboration}
+\href{http://www.hll.mpg.de/twiki/bin/view/DEPFET/CollaborationList}{The DEPFET collaboration} consists of nearly 100 members from 13 institutes. It currently takes responsibility for the following work packages
+\begin{description}
+\item[Thin self-supporting ``all-silicon'' sensors] {The sensors are produced in-house, and the mechanical properties of thin ladders in a realistic environment are studied in detail using a Belle II mock-up. LC-specific studies are also performed within this collaboration}
+\item[Cooling] {The DEPFET cooling concept for Belle II relies on two-phase \ce{CO2} cooling for the end-of-ladder. The sensor is cooled moreover with a forced flow of cold gas. The \ce{CO2} cooling plant is developed by KEK, while the design for the cooling block/support structure is performed within the collaboration.
+A novel cooling strategy for future applications based on mico-channels in the sensors is being evaluated in the collaboration. Solutions for monitoring of environmental parameters are being developed.}
+\item[Read-out and steering ASIC production] {The operation of a DEPFET detector requires ancillary electronics in the form of a read-out ASIC (the Drain Current Digitizer), a steering ASIC (SWITCHER) and on-detector ASICs for digital data processing (DHP). These ASICs are developed within the collaboration.}
+\item[Data Acquisition and Trigger] {The development of off-detector electronics to process the data from the Belle II vertex detector.}
+\item[Characterization of prototypes, laboratory and beam tests] {This work package has contributions from nearly all institutes involved in the DEPFET collaboration.}
+\end{description}
+
+Currently, the construction of the Belle II vertex detector is the main focus of the collaboration. The requirements of the Belle II vertex detector are similar to those of the ILC, and more stringent in some aspects. The Belle II construction project therefore has considerable synergy with developments for a future linear collider. The LC-specific effort is focused on the development of small-pixel devices and the design of a forward vertex detector. We envisage that after the installation of the Belle II detector (2016) the balance between both projects is restored.
+studied.
 
 \subsection{Introduction}
-DEPFET active pixel sensors are one of most mature candidates for the ILC vertex detector and the innermost disks of the forward tracker.
+The DEPFET technology implements a single active element within the active pixel by integrating a p-MOS transistor in each pixel on the fully depleted high-resistivity silicon wafer. Additional n-implants near the transistor act as a trap for charge carriers created in the substrate (internal gate), so that they are collected beneath the transistor gate.
+
+\todo[inline]{The following is too detailed for the Introduction}
+The Front-end Electronics (FE), i.e., readout electronics, is currently organized by a set of several ASICs~\cite{Krueger2010337}: The SWITCHER, Drain Current Digitizer (DCD)~\cite{1748-0221-6-01-C01085,5446501} and Data Handling Processor (DHP)~\cite{1748-0221-7-01-C01069} chips.
+The SWITCHER control chips select segments of the sensor array for read-out. A separate driver supplies the clear pulse of up to 20 V to remove the collected signal from the internal gate after read-out. Several designs of the SWITCHER versions optimized for Belle II requirements have been produced and tested successfully in two different CMOS technologies (\unit[0.35]{\micron} and \unit[0.18]{\micron}). The drain current signals from 256 columns of pixels are processed and digitized by the DCD.
+The analog input stage keeps the column line potential constant (necessary to achieve fast readout), compensates for variations in the DEPFET pedestal currents, and amplifies and shapes the signal. The last DCD version is implemented in UMC 0.18um CMOS technology using special radiation hard design techniques (e.g. enclosed NMOS gates) in the analog part. This DCD chip is optimized specifically for Belle II requirements. The derandomized raw data from the DCD are transmitted to the DHP using fast parallel 8-bit digital outputs.
+This third ASIC, located on the end of ladder area immediately behind the DCD, performs data processing (pedestal subtraction, common code correction), compression (zero suppression), buffering and fast serialization. It furthermore controls the other read-out ASICs.
+
 
 \begin{table}
 \centering
@@ -32,13 +46,14 @@ DEPFET active pixel sensors are one of most mature candidates for the ILC vertex
 
 \subsection{Recent Milestones}
 The concept of a DEPFET active pixel detector for vertex detection at collider experiments was initiated in the linear collider community (for TESLA).
-The operation principle was extensively proven on small-scale prototypes. A recent reassessment of the DEPFET potential for a linear collider at the energy frontier is found in~\cite{6484214}.
-The collaboration is making rapid progress - fueled by the election of DEPFET for the Belle II detector - towards a full-blown detector system including solutions for services and supports.
-A full-scale, 75 micron thin Belle II ladder was successfully submitted to a test in a beam of charged at DESY in January 2014.
+The operation principle was extensively proven \todo{Reference} on small-scale prototypes. A recent reassessment of the DEPFET potential for a linear collider at the energy frontier is found in~\cite{6484214}.
+A full-scale, \unit[75]{\micron} thin Belle II ladder was successfully \todo{Reference} submitted to a test in a beam of charged \todo{particles?pions?} at DESY in January 2014.
+
+The first full-scale DHP prototype was implemented in IBM \unit[90]{nm} CMOS technology. As this technology was discontinued, more recent designs were submitted in the TSMC \unit[65]{nm} CMOS process. DHPT v.1.0 comprises temperature independent current references, 11 bias 8-bit DACs with current output, an integrated temperature measuring system and JTAG control. This design has been successfully tested during early 2014 \todo{Reference}.
 
 \subsection{Engineering Challenges}
-Vertex detector ladders with a thickness of several tens of microns and a spatial resolution of well below 10 microns require very robust mechanical properties. The power generated by the sensor and ASICs must be removed with the smallest impact on the detector material.
-Measurements on thin ladders under a realistic load, including pulsed powering according to the ILC beam structure, prove the excellent mechanical properties of the all-silicon ladder. A complete mock-up for the innermost disks is under construction.
+Vertex detector ladders with a thickness of several tens of microns and a spatial resolution of well below \unit[10]{\micron} require very robust mechanical properties. The power generated by the sensors and ASICs must be removed with the smallest impact on the detector material.
+Measurements on thin ladders under a realistic load, including pulsed powering according to the ILC beam structure, prove \todo{Reference} the excellent mechanical properties of the all-silicon ladder.
 
 \subsection{Future Plans}
 Currently, the construction of the Belle II vertex detector (to be installed by 2016) implies a large effort of R\&D, including:
@@ -56,52 +71,11 @@ pixels of $20 \times \unit[20]{\micron^2}$
 \item A detailed characterization of the response of the device
 \item Design of the ancillary ASICs, taking full responsibility for future design cycles of the Front End read-out chip, the Drain Current Digitizer (DCD) that is relevant to the ILC and a Belle II upgrade. This chip converts the analog signal from the detector to digital and has a crucial impact on the detector performance.
 \end{itemize}
-\subsection{Applications Outside of Linear Colliders}
-The election of DEPFET technology for the Belle II detector therefore represents an important spin-off of linear collider detector R\&D. DEPFET detectors are furthermore used for X-ray imaging at the XFEL. Future space missions envisage the use of DEPFET sensors. Their use in microscopy is being studied.
 
-\section{DEPFET Electronics}
-% \subsection{Collaborating Institutions}
-% UB and U. Bonn
-\subsection{Introduction}
-\subsection{Recent Milestones}
-The Front-end Electronics (FE), i.e., readout electronics, is currently organized by a set of several ASICs: The SWITCHER, DCD and DHP chips~\cite{Krueger2010337}.
-The SWITCHER control chips select segments of the sensor array for read-out. A separate driver supplies the clear pulse of up to 20 V to remove the collected signal from the internal gate after read-out. Several designs of the SWITCHER versions optimized for Belle II requirements have been produced and tested successfully in two different CMOS technologies (0.35um and 0.18um). The drain current signals from 256 columns of pixels are processed and digitized by the DCD chip (Drain Current Digitizer ~\cite{1748-0221-6-01-C01085}~\cite{5446501}.
-The analog input stage keeps the column line potential constant (necessary to achieve fast readout), compensates for variations in the DEPFET pedestal currents, and amplifies and shapes the signal. The last DCD version is implemented in UMC 0.18um CMOS technology using special radiation hard design techniques (e.g. enclosed NMOS gates) in the analog part. This DCD chip is optimized specifically for Belle II requirements. The derandomized raw data from the DCD are transmitted to the Data Handling Processors (DHP)~\cite{1748-0221-7-01-C01069} using fast parallel 8-bit digital outputs.
-This third ASIC, located on the end of ladder area immediately behind the DCD, performs data processing (pedestal subtraction, common code correction), compression (zero suppression), buffering and fast serialization. It furthermore controls the other read-out ASICs.
-The first full-scale DHP prototype was implemented in IBM 90 nm CMOS technology. With the discontinuity of this technology new designs started in the TSMC 65nm CMOS process being the DHPT v.1.0 the last full-scale chip.
-\subsection{Engineering Challenges}
-The UB responsibility is the slow control and biasing part of DHP. Versions DHP0.1 and DHP0.2 were designed in 90nm IBM CMOS process.
-Several designs (DHPT0.1, DHPT0.2 and DHPT v.1.0) were submitted to fabrication with TSMC 65nm and were tested during the period 2011-2013. The first versions of these ASICs included sub-modules that where included in the final design. The design submitted by the UB comprises temperature independent current references, 11 bias 8-bit DACs with current output, an integrated temperature measuring system and JTAG control. This design has been successfully tested during early 2014.
-
-\subsection{Future Plans}
 In the longer term the DCD and DHP are envisaged to evolve into a single chip. Being large arrays of DEPFET pixels a promising technology for the vertex detector of the planned ILC, adaptation of the DCD and DHP chips must also be done.
-\subsection{Applications Outside of Linear Colliders}
 
-
-\section{DEPFET Detector R\&D}
-\subsection{Introduction}
-The DEPFET collaboration pursues the development of active pixel detectors based on a fully depleted high-resistivity silicon wafer with an integrated Field Effect Transistor for signal amplification. The operation principle was extensively proven on small-scale prototypes.
-The collaboration is making rapid progress -- fueled by the election of DEPFET for the Belle II detector -- towards a full-blown detector system including solutions for services and supports. A full-scale, 75 micron thin Belle II ladder was successfully submitted to a test in a beam of charged at DESY in January 2014. In the near future we hope to characterize the performance of ILC design prototypes with pixels of $20 \times 20$ \micron squared.
+ In the near future we hope to characterize the performance of ILC design prototypes with pixels of $20 \times \unit[20]{\micron^2}$.
 Important experience is furthermore gained with the thermal and mechanical properties of ultra-thin ladders. Measurents on thin ladders under a realistic load, including pulsed powering according to the ILC beam structure, prove the excellent mechanical properties of the all-silicon ladder. A complete mock-up for the innermost disks is under construction.
 
-\subsection{DEPFET for the ILC}
-DEPFET active pixel sensors are one of most mature candidates for the ILC vertex detector and the innermost disks of the forward tracker. The performance of a DEPFET-based vertex detector for the ILC is evaluated in a recent publication:
-The DEPFET collaboration, ``DEPFET active pixel detectors for a future linear e+e- collider'', IEEE Trans. Nucl. Sc. 60, 2, 2 (2013).
-Currently, the construction of the Belle II vertex detector is the main focus of the collaboration. The requirements of the Belle II vertex detector are similar to those of the ILC, and more stringent in some aspects. The Belle II construction project therefore has considerable synergy with developments for a future linear collider. The LC-specific effort is focused on the development of small-pixel devices and the design of a forward vertex detector. We envisage that after the installation of the Belle II detector (2016) the balance between both projects is restored.
-The concept of a DEPFET active pixel detector for vertex detection at collider experiments was initiated in the linear collider community (for TESLA). The election of DEPFET technology for the Belle II detector therefore represents an important spin-off of linear collider detector R\&D. DEPFET detectors are furtermore used for X-ray imaging at the XFEL. Future space missions envisage the use of DEPFET sensors. Their use in electron microscopy is being studied.
-
-\subsection{The DEPFET Collaboration}
-The DEPFET collaboration consists of nearly 100 members from 13 institutes. For a complete list, see:
-http://www.hll.mpg.de/twiki/bin/view/DEPFET/CollaborationList
-The DEPFET collaboration has designated a contact for the LC community (Marcel Vos, IFIC Valencia).
-The implication of the institutes in specific areas of detector R\&D (following roughly the work packages defined by the collaboration) is as follows:
-\begin{description}
-\item[Thin self-supporting ``all-silicon'' sensors] {The sensors are produced in-house at the HalbLeiterLabor (semiconductor laboratory) of the Max Planck Gesellschaft (MPG) in Munich, Germany.
-The mechanical properties of thin ladders in a realistic environment are studied in detail by DESY Hamburg (that houses the Belle II mock-up) and IFIC Valencia (that focuses on LC-specific studies).
-}
-\item[Cooling] {The DEPFET cooling concept for Belle II relies on two-phase CO2 cooling for the end-of-ladder. The sensor is cooled moreover with a forced flow of cold gas. The CO2 cooling plant is developed by KEK, while the design for the cooling block/support structure is performed at MPG. KIT in Karlsruhe has led the thermal performance work package.
-A novel cooling strategy for future applications based on mico-channels in the sensors is being evaluated in collaboration between MPG, U. Bonn and IFIC Valencia. Solutions for monitoring of environmental parameters are developed at IFCA in Santander.}
-\item[Read-out and steering ASIC production] {The operation of a DEPFET detector requires ancillary electronics in the form of a read-out ASIC (the Drain Current Digitizer), a steering ASICs (SWITCHER) and on-detector ASICs for digital data processing (DHP). These ASICs are developed at U. Heidelberg, U. Bonn and U. Barcelona.}
-\item[Data Acquisition and Trigger] {The development of off-detector electronics to process the data from the Belle II vertex II detector is led by U. Giessen.}
-\item[Characterization of prototypes, laboratory and beam tests] {This work package has contributions from nearly all institutes involved in the DEPFET collaboration. Overall coordination is in the hands of MPG, while the beam tests are coordinated by U. Bonn and U. Goettingen.}
-\end{description}
+\subsection{Applications Outside of Linear Colliders}
+The concept of a DEPFET active pixel detector for vertex detection at collider experiments was initiated in the linear collider community (for TESLA). The election of DEPFET technology for the Belle II detector therefore represents an important spin-off of linear collider detector R\&D. DEPFET detectors are furthermore used for X-ray imaging at the XFEL \todo{Reference}. Future space missions envisage the use of DEPFET sensors. Their use in microscopy is being studied.

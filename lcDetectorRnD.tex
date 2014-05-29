@@ -11,11 +11,14 @@
 \usepackage{gensymb}
 \usepackage[colorlinks=true,
             urlcolor=cyan]{hyperref}
+\usepackage[obeyFinal,colorinlistoftodos]{todonotes} %add final to documentclass options to turn off todos
 \usepackage{units}
+% for chemical symbols, relevant for gas mixes, for example
+\usepackage[version=3]{mhchem}
 \usepackage[type1]{libertine}
 \usepackage[libertine]{newtxmath}
 \usepackage{bm}
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=biber,sorting=none]{biblatex}
 \addbibresource{detectorRnD.bib}
 %%% This makes a nice upright greek mu for use in units
 \makeatletter
@@ -44,11 +47,12 @@
 
 \begin{document}
 \tableofcontents
+\listoftodos
 \chapter{Vertex Detector R\&D}
-\input{VertexDetector/DEPFET/DEPFET}
 \input{VertexDetector/Chronopix/Chronopix}
-\input{VertexDetector/FPCCD/FPCCD}
 \input{VertexDetector/CMOS/CMOS}
+\input{VertexDetector/DEPFET/DEPFET}
+\input{VertexDetector/FPCCD/FPCCD}
 \input{VertexDetector/VIP/VIP}
 \input{VertexDetector/SOI/SOI}
 \input{VertexDetector/CLICPIX/CLICPix}
