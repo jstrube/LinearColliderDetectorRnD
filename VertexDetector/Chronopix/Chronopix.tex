@@ -1,37 +1,35 @@
-\section{ChronoPix}
-% \subsection{Collaborating Institutions}
-%     The chronopixel sensor is been developed in the collaboration of the University of Oregon and Yale University. The silicon sensor engineering is performed by Sarnoff Corporation under contract with the two Universities.
+\section{ChronoPixel}
 
 \subsection{Introduction}
-The chronopixel is the monolithic CMOS pixelated sensor with the ability to record time stamp of pixel crossing by charge particles in the pixel memory. Each pixel contains 2 memory cells (12 bits each), and can record 2 time stamps happening during the same bunch train. This information is read out in the time interval between bunch trains. Chronopixel option for ILC vertex detector was described in the ILC DBD. By the time of the DBD, 2 prototypes were built and tested, and summary of test results were also presented in the DBD. They are listed below: 
+The ChronoPixel is a monolithic CMOS pixelated sensor with the ability to record up to two time stamps of pixel hits by charge particles in a nominal ILC bunch train. This information is read out in the time interval between bunch trains. The ChronoPixel option for ILC vertex detector was described in the ILC DBD~\cite{2011arXiv1109.2811B}. By the time of the DBD, 2 prototypes were built and tested, and summary of test results were also presented in the DBD. They are listed below: 
 \begin{itemize}
-    \item We have proven that we can record time stamps in every pixel with time resolution better than \unit[300]{ns} (we have tested it down to 150 ns).
+    \item We have proven \todo{reference} that we can record time stamps in every pixel with time resolution better than \unit[300]{ns} (we have tested it down to \unit[150]{ns}).
     \item We have tested sparse readout, allowing to read only pixels with hits, thus reducing readout time to the level allowing readout of all pixels in the sensor in the intervals between bunch crossings.
-    \item We have tested pulsed power for analog part of the pixels and have proven that turning power ON in about \unit[100]{$\mu s$} before bunch train and turning it off between bunch trains does not create any problems for threshold setting accuracy in the comparators.
-    \item We have tested the idea of building all in-pixel electronics only from NMOS transistors, thus eliminating the need for special process (deep p-well) to protect signal charge from parasitical collection by in-pixel transistors. We have proven that all NMOS electronics can be built in this way, and that this does not significantly increase the power consumption compared to CMOS electronics.
-    \item We have tested compensation of comparator offsets using analog calibration, when the value of the offset is stored as a voltage on the capacitor in each pixel. This have advantage over digital calibration (value of offset is stored as code in the special register) in that there are no discrete levels, and accuracy of such a calibration scheme is not affected by the size of such a register and the spread of the initial offsets.
+    \item We have tested pulsed power for the analog part of the pixels and have proven \todo{reference} that turning power ON in about \unit[100]{$\mu$s} before bunch train and turning it off between bunch trains does not create any problems for threshold setting accuracy in the comparators.
+    \item We have tested the idea of building all in-pixel electronics only from NMOS transistors, thus eliminating the need for special process (deep p-well) to protect signal charge from parasitic collection by in-pixel transistors. We have proven \todo{reference} that all NMOS electronics can be built in this way, and that this does not significantly increase the power consumption compared to CMOS electronics.
+    \item We have tested compensation of comparator offsets using analog calibration, when the value of the offset is stored as a voltage on the capacitor in each pixel. This has and advantage over digital calibration (where the offset value is stored as code in the special register) in that there are no discrete levels, and accuracy of such a calibration scheme is not affected by the size of the register or the spread of the initial offsets.
 \end{itemize}
 \subsection{Recent Milestones}
 \begin{itemize}
     \item Test of prototype 2 revealed some problems. Possible solutions for these problems were discussed with Sarnoff engineers.  
-    \item New contract with Sarnoff for the design of prototype3 was signed in August 2013.
-    \item The submission of prototype 3 to foundry for manufacturing is expected by the end of April 2014.
+    \item A new contract with Sarnoff for the design of prototype 3 was signed in August 2013.
+    \item The submission of prototype 3 to the foundry for manufacturing is expected by the end of April 2014.
 \end{itemize}
 \href{https://agenda.linearcollider.org/getFile.py/access?contribId=309&sessionId=37&resId=1&materialId=slides&confId=6000}{The most recent report} on chronopixel status was presented by N.~Sinev at LCWS13 on November 2013 at Tokyo 
 
-\subsection{Engineering Challenges}
+\subsection{Engineering Challenges\todo{Integration Challenges missing}}
 \begin{itemize}
-    \item Achieving low capacitance of sensor diode in 65 nm and smaller feature size process. Following standard design rules for such process led to much higher than hoped for diode capacitance. There seems to be solution for this problem (using non-standard “native diode” from design library). But that need to be checked, and this is the main goal of the 3rd prototype. 
-    \item If low value of sensor diode capacitance will be achieved, the signal/noise ratio will improve. However, lower value of this capacitance will make it more sensitive to cross-talks through capacitive coupling. Reducing such coupling can be a challenge.
-    \item Transition from small prototypes (few $\text{mm}^{2}$) to real ILC detector size (~ \unit[10]{$\text{cm}^2$}) may meet additional problems. One of them will be effect of Lorentz forces on the power supply buses, especially in the case of pulsing power. Pulsing power is the only way to achieve acceptable power dissipation in the vertex detector. However, it will generate varying Lorentz forces, acting on power supply lines. This may produce vibrations, which are unacceptable for required spatial resolution of the detector.
+    \item Achieving low capacitance of the sensor diode in a \unit[65]{nm} and smaller feature size process. Following standard design rules for such a process led to much higher diode capacitance than hoped for. The third prototype attempts to solve this problem using non-standard ``native diode'' from the design library. This needs to be checked once the prototype is delivered.
+    \item If acceptable levels of the sensor diode capacitance can be achieved, the signal/noise ratio will improve. However, a lower value of the capacitance will make the pixels more sensitive to cross-talks through capacitive coupling. Reducing this coupling can be a challenge.
+    \item Transition from small prototypes (few $\text{mm}^{2}$) to ILC detector size (~ \unit[10]{$\text{cm}^2$}) may meet additional problems. One of them will be the effect of Lorentz forces on the power supply buses, especially in the case of power pulsing. Power pulsing is the only way to achieve acceptable power dissipation in the vertex detector. However, it will generate varying Lorentz forces, acting on power supply lines. This may produce vibrations, which are unacceptable for the required spatial resolution of the detector.
 \end{itemize}
 
 \subsection{Main directions of the R\&D for the next 5 years}
 \begin{itemize}
-    \item Achieve signal/noise ratio required for close to 100\% signal registration efficiency. So far we got a signal/noise of around 10 in prototype 2, and we would like at least 20. We know a few ways to improve it - increasing epitaxial layer thickness, increasing epitaxial layer resistivity, or reducing sensor capacitance. The most attractive would be reducing sensor capacitance, as it does not require special process, however there are some problems to be solved with this approach.
-    \item Achieve required pixel size (prototype 3 will have \unit[25]{\micron} pixels, we would eventually like \unit[15]{\micron}). It may require going to technology with feature size less than 65 nm. There seems to be no problems in that, but both - good signal/noise and pixel size requirements may be challenging.
+    \item Achieve signal-to-noise ratio required for close to 100\% signal registration efficiency. So far we got a signal-to-noise ratio of around 10 in prototype 2, and we would like at least 20. We know a few ways to improve it - increasing epitaxial layer thickness, increasing epitaxial layer resistivity, or reducing sensor capacitance. The most attractive would be reducing sensor capacitance, as it does not require special processes, however there are some problems to be solved with this approach.
+    \item Achieve the required pixel size (prototype 3 will have \unit[25]{\micron} pixels, we would eventually like \unit[15]{\micron}). It may require going to a technology with feature size less than 65 nm. There seems to be no problems in that, but both - good signal-to-noise ratio and pixel size requirements may be challenging.
     \item Achieve acceptable level of inter-pixel and digital to analog circuit cross talks and parasitic feed backs.
-    \item Depending on available funding, try to build complete sensor with large enough area and full feature readout.
+    \item Depending on available funding, try to build a complete sensor with a large enough area and full feature readout.
 \end{itemize}
 \subsection{Applications Outside of Linear Colliders}
-     With some modifications (for example, adding time-time convertor) Chronopixel architecture can be applied for any experiment requiring time stamping of individual hits - it may be HL-LHC, CLIC and so on.
+     With some modifications (for example, adding time-time converter) Chronopixel architecture can be applied for any experiment requiring time stamping of individual hits - it may be HL-LHC, CLIC and so on.
