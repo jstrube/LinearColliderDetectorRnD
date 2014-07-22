@@ -1,5 +1,6 @@
 {
   "file": {
     "commands": ["./compileLatex"]
-  }
+  },
+	"PDF-viewer": "/Applications/Skim.app/Contents/SharedSupport/displayline %l %o %f"
 }
