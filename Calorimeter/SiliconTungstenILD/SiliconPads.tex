@@ -8,9 +8,9 @@ The work is now focusing on the construction of a technological prototype. This 
 
 For the technological prototype, the SKIROC ASIC will be embedded into the calorimeter layers and mounted on 9 layer PCBs that will be as thin as \unit[1.5]{mm}. Silicon wafers, the PCB and the 16 mounted circuits constitute the Active Signal Units or ASUs. Up to ten of these ASUs will be assembled to form a calorimeter layer. The technology of the interconnections was applied with success to first units of the technological prototype.
 
-A series of beam tests with simplified ASUs have been carried out in the years 2012 and 2013 at DESY. The analysis of these data validated the concept of the front end electronics but will also allow for correcting a small number of shortcomings of the SKIROCs ASIC. These will be corrected in the version SKIROC2b that is supposed to be produced at the end of 2014. A paper on the analysis of the 2012 data has been submitted to JINST in March 2014.
+A series of beam tests with simplified ASUs have been carried out in the years 2012 and 2013 at DESY. The analysis of these data validated the concept of the front end electronics but will also allow for correcting a small number of shortcomings of the SKIROCs ASIC. These will be corrected in the version SKIROC2b that is supposed to be produced at the end of 2014. A paper on the analysis of the 2012 data has been submitted to JINST in \todo{update?} March 2014.
 Particularly in summer 2013 (i.e. Post-DBD phase), the SKIROC ASIC has been operated in power pulsed mode. For this bias currents of the ASIC are shut down and raised with a given frequency (\unit[5]{Hz} for ILC, \unit[10]{Hz} in our beam tests). The good agreement between the MIP spectra obtained in power pulsed and conventional mode (see e.g.~\cite{Poschl:Giessen:ECAL:2014}) give confidence that this technology can indeed be applied for a calorimeter at a linear collider and more precisely at the ILC. More studies are needed as the technological prototype grows in size.
-After the departure of the OMEGA group from LAL the development of microelectronics at LAL has been stopped. A new institute with the same name, i.e. OMEGA, has been created by the IN2P3 and is hosted at the Ecole Polytechnique. The ILC group at LAL will continue to collaborate with the new institute. The details will however have to be sorted out under the new circumstances. It is maybe still worthwhile to say that for the next it is planned to first produce the debugged version SKIROC2b (see above) and then the version SKIROC3. The latter will comprise all the features needed for an ASIC.
+% After the departure of the OMEGA group from LAL the development of microelectronics at LAL has been stopped. A new institute with the same name, i.e. OMEGA, has been created by the IN2P3 and is hosted at the Ecole Polytechnique. The ILC group at LAL will continue to collaborate with the new institute. The details will however have to be sorted out under the new circumstances. It is maybe still worthwhile to say that for the next it is planned to first produce the debugged version SKIROC2b (see above) and then the version SKIROC3. The latter will comprise all the features needed for an ASIC.
 
 Other recent accomplishments include:
 \begin{itemize}
@@ -30,18 +30,11 @@ Studies on the SiECAL optimization have been performed with full ILD detector si
 	\item The fraction of dead channels does not much degrade the jet energy resolution up to the fraction of ~5\%.
 \end{itemize}
 
-\subsection{Engineering Challenges}
-\begin{itemize}
-	\item Silicon wafer cost reduction when used for calorimetry; direct contact with producers established (Hamamatsu, On-Semi, \ldots).
-	\item A chip with the good dynamic, noise, power dissipation (using power pulsing), etc.
-	\item Integration in a compact device, ensuring all the requests (precision: electronic and mechanic, heat production, reliability)
-	\item Industrialization of solutions; scalability of tests for a 100M channel detector.
-\end{itemize}
-
-\subsection{Future Plans}
-Detector R\&D plan in coming years are shown below.
+\subsection{Plans of the near future}
+The different units of the SiW Ecal for the ILD detector need to be assembled into detector layers of up to two meter in length comprising up to 10 detection units dubbed ASUs. For this we propose to develop an assembly line, incorporating the reception and the test of the material, the alignment of the ASUs and the interconnection, with a continuous monitoring for quality control purposes. The deliverable is a still manual assembly bench capable for a small production of layers. Based on the manual assembly bench we will propose an automatized system for mass assembly together with industrial partners. A survey to search for partners is part of the proposal. A goal is to design the system such that it can be easily duplicated at other sides. In the ideal case the assembly bench is versatile enough to reply to needs for other detector systems than ILD (e.g. CMS). Other Detector R\&D plans include:
 \begin{itemize}
 \item Test beam experiments with long SiECAL slabs using new front-end electronics with SKIROC2 ASICs,
+\item Completion of the SKIROC3 ASIC, which has all the features needed at the ILC.
 \item Combined test beam experiments with ScECAL and AHCAL,
 \item Development a DAQ system (set up of hardwares, development of software
 and firmware) for the combined tests.
@@ -52,22 +45,29 @@ electronics in prospect of mass production.
 \item Further optimization of SiECAL and Hybrid ECAL with full ILD detector simulation.
 \end{itemize}
 
-\subsection{Plans of the near future - Ecal assembly bench and R\&D on digital electronics}
-The different units of the SiW Ecal for the ILD detector need to be assembled into detector layers of up to two meter in length comprising up to 10 detection units dubbed ASUs. For this we propose to develop an assembly line, incorporating the reception and the test of the material, the alignment of the ASUs and the interconnection, with a continuous monitoring for quality control purposes. The deliverable is a still manual assembly bench capable for a small production of layers. Based on the manual assembly bench we will propose an automatized system for mass assembly together with industrial partners. A survey to search for partners is part of the proposal. A goal is to design the system such that it can be easily duplicated at other sides. In the ideal case the assembly bench is versatile enough to reply to needs for other detector systems than ILD (e.g. CMS). Relevant data recorded during the assembly process can for example be stored in a database. The tools for efficient storage and retrieving data and information about detector components can be developed in collaboration with other proposals aiming at the mass production of calorimeter elements and/or benefit from similar tools developed e.g. for the XFEL project. This project might become a task within the calorimeter package of the AIDA2 project.
+ % Relevant data recorded during the assembly process can for example be stored in a database. The tools for efficient storage and retrieving data and information about detector components can be developed in collaboration with other proposals aiming at the mass production of calorimeter elements and/or benefit from similar tools developed e.g. for the XFEL project. 
 
+\subsection{Engineering Challenges}
+The following challenges will have to be addressed when proposing this technology for an ILC detector:
+\begin{itemize}
+	\item Silicon wafer cost reduction when used for calorimetry; direct contact with producers established (Hamamatsu, On-Semi, \ldots).
+	\item A chip with the good dynamic, noise, power dissipation (using power pulsing), etc.
+	\item Integration in a compact device, ensuring all the requests (precision: electronic and mechanic, heat production, reliability)
+	\item Industrialization of solutions; scalability of tests for a 100M channel detector.
+\end{itemize}
 
-\subsection{Further Activities}
-Although not explicitly asked it is worthwhile to point out that the LAL plays also a role in the integration of the ILD detector. Notably the engineers are in charge of validating the CAD Models of the sub-detectors before they come part of the official ILD database. It can be expected that this activity increases in importance when the ILC will move towards a real project.
+% \subsection{Further Activities}
+% Although not explicitly asked it is worthwhile to point out that the LAL plays also a role in the integration of the ILD detector. Notably the engineers are in charge of validating the CAD Models of the sub-detectors before they come part of the official ILD database. It can be expected that this activity increases in importance when the ILC will move towards a real project.
 
-Finally, since 2012 there is a collaboration with the AppStat group of LAL. The aim of this collaboration is to develop algorithms based on machine learning techniques to assure an optimal separation of particle showers in highly granular calorimeters.
+% Finally, since 2012 there is a collaboration with the AppStat group of LAL. The aim of this collaboration is to develop algorithms based on machine learning techniques to assure an optimal separation of particle showers in highly granular calorimeters.
 
-The departure of the OMEGA group requires re-orientation of the LAL contribution to detector electronics. The LAL has recognised competences in digital electronics. It is considered to embark on the R\&D for DAQ systems for linear collider detectors. Details will be worked during 2014. It is envisaged to make this work part of the calorimeter package of the AIDA2 project.
+% The departure of the OMEGA group requires re-orientation of the LAL contribution to detector electronics. The LAL has recognised competences in digital electronics. It is considered to embark on the R\&D for DAQ systems for linear collider detectors. Details will be worked during 2014. It is envisaged to make this work part of the calorimeter package of the AIDA2 project.
 
-In addition, we are working on a study of Hybrid ECAL which has ”Si sensor ”and ”Scintillator and photo sensor ”Active layers as an optimization of ECAL in few of the performance and the cost.
+% In addition, we are working on a study of Hybrid ECAL which has ”Si sensor ”and ”Scintillator and photo sensor ”Active layers as an optimization of ECAL in few of the performance and the cost.
 
 \subsection{Applications Outside of Linear Colliders}
 \begin{itemize}
-	\item CEPC, TLEP and directly today on CMS upgrade
+	\item CEPC, TLEP and CMS upgrade have possible applications for this technology
 	\item The compact Silicon-W design has been used in the PAMELA satellite (very similar to physics prototype)~\cite{1742-6596-160-1-012039}
 \end{itemize}
 
