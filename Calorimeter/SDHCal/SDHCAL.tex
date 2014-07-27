@@ -1,14 +1,14 @@
 \section{SDHCAL}
-
+\todo[inline]{Engineering Challenges missing}
 \subsection{Introduction}
-The Micromegas R\&D pursued at LAPP is primarily intended for Particle Flow calorimetry at future linear colliders. It focuses on hadron calorimetry with large-area Micromegas segmented in very small readout cells of $1\times\unit[1]{cm^{2}}$. This granularity provides unprecedented imaging capability which can be exploited to improve the measurement of jet energy. Past and current R\&D efforts are described with emphasis on achievements since the publication of the ILC Detailed Baseline Design.
+The Micromegas R\&D is primarily intended for Particle Flow calorimetry at future linear colliders. It focuses on hadron calorimetry with large-area Micromegas segmented in very small readout cells of $1\times\unit[1]{cm^{2}}$. This granularity provides unprecedented imaging capability which can be exploited to improve the measurement of jet energy. Past and current R\&D efforts are described with emphasis on achievements since the publication of the ILC Detailed Baseline Design.
 
 
 \subsection{Hadron calorimeter design}
 
 The design of calorimeters at a future linear collider is optimised for the reconstruction of jets with a Particle Flow method. The SiD HCAL will be segmented in cells of $1\times \unit[1]{cm^2}$. With a total instrumented area of $\unit[3000]{m^{2}}$, the number of readout channels will reach $30\times 10^{6}$. This unprecedented granularity can be achieved with gas detectors, thin PCBs and embedded front-end ASICs.
 
-In addition, calorimeters will be placed inside the solenoid magnet to insure good matching of electron and charged hadron tracks with their energy deposits in the ECAL and HCAL. To limit cost, a very compact mechanical design is mandatory: e.g. the SiD HCAL would feature 40 layers within $\sim\unit[110]{cm}$. This design relies on very thin active layers to achieve fine sampling ($\sim$ $\unit[0.1]{\lambda_{int}}$ / layer) and good hadron energy resolution ($\sim 50\% / \sqrt{E}$). The targeted active layer thickness and length in the barrel HCAL modules are \unit[8]{mm} and \unit[3]{m} respectively. To minimise dead zones, readout boards will be placed at the two ends of the barrel modules. Along the beam direction, ASIC will be daisy chained and PCBs connected together with flat connectors and cables.
+In addition, calorimeters will be placed inside the solenoid magnet to insure good matching of electron and charged hadron tracks with their energy deposits in the ECAL and HCAL. To limit cost, a very compact mechanical design is mandatory: e.g. the SiD HCAL would feature 40 layers within $\sim\unit[110]{cm}$. This design relies on very thin active layers to achieve fine sampling ($\sim\unit[0.1]{\lambda_{int}}$ / layer) and good hadron energy resolution ($\sim 50\% / \sqrt{E}$). The targeted active layer thickness and length in the barrel HCAL modules are \unit[8]{mm} and \unit[3]{m} respectively. To minimise dead zones, readout boards will be placed at the two ends of the barrel modules. Along the beam direction, ASIC will be daisy chained and PCBs connected together with flat connectors and cables.
 
 Active cooling of the active layers is extremely challenging with this design. Instead, it is considered to limit heat dissipation and gradients inside the calorimeters by power-pulsing the front-end circuitry. Power-pulsing is possible because of the particular time structure of the ILC beam. This structure also drives the design of the ASICs which will be self-triggered. During collisions, signals will be processed and stored in memory with a timestamp synchronous to the ILC clock. Between bunch trains, memories are first read out, then the ASIC are turned off. With an ILC duty-cycle of 0.5\%, the power consumption can be reduced down to $\unit[10]{\mu W}$ / channel.
 
@@ -16,8 +16,7 @@ Active cooling of the active layers is extremely challenging with this design. I
 
 \subsubsection{The SDHCAL}
 
-The SDHCAL is a prototype of imaging hadron calorimeter equipped with 50 layers of gaseous detectors of $1\times \unit[1]{m^{2}}$ interleaved by steel absorbers (Figure~\ref{sdhcal} (left)). Each detectors is segmented in pads of $1\times\unit[1]{cm^{2}}$ and the processed pad signal is coded over 2-bits (Figure~\ref{sdhcal} (right). The number of readout channels per layer imposes to integrated the front-end electronics directly on the gaseous detector printed-circuit-boards (PCB). Several CALICE groups are involved in this project. The LAPP group developed technologically advanced Micromegas prototypes in view of test in the SDHCAL. It also took responsibility of part of the data acquisition system (DAQ).
-
+The SDHCAL is a prototype of imaging hadron calorimeter equipped with 50 layers of gaseous detectors of $1\times \unit[1]{m^{2}}$ interleaved by steel absorbers (Figure~\ref{sdhcal} (left)). Each detectors is segmented in pads of $1\times\unit[1]{cm^{2}}$ and the processed pad signal is coded over 2-bits (Figure~\ref{sdhcal} (right). The number of readout channels per layer imposes to integrated the front-end electronics directly on the gaseous detector printed-circuit-boards (PCB). Several CALICE groups are involved in this project.
 
 \begin{figure}
 \begin{centering}
@@ -74,7 +73,7 @@ First resistive designs using resistive strips and pads were implemented on smal
 
 \subsection{Detector R\&D plans for the coming years}
 
-Plans for the coming years include maintaining a commitment to linear collider detector R\&D and possibly seek new applications. Despite a decline of resources, an R\&D program to optimise resistive Micromegas for calorimetry is established. Linearity, rate capability and spark protection in dense electromagnetic showers will be checked up to high-energy and for detector designs with a large variety of resistivity and geometry. These measurements will be necessary to validate the resistive Micromegas technology for calorimetry at a future LC. Also, the on-going R\&D for high-luminosity LHC (HL-LHC) detector upgrades are an appealing perspective to the LAPP group. In particular, the possibility to equip the backing part of the CMS forward calorimeter is being investigated. Such high-rate application will put strong stability constraints on resistive Micromegas, making the optimisation work mentioned above even more relevant.
+Plans for the coming years include maintaining a commitment to linear collider detector R\&D and possibly seek new applications. Despite a decline of resources, an R\&D program to optimise resistive Micromegas for calorimetry is established. Linearity, rate capability and spark protection in dense electromagnetic showers will be checked up to high-energy and for detector designs with a large variety of resistivity and geometry. These measurements will be necessary to validate the resistive Micromegas technology for calorimetry at a future LC. Also, the on-going R\&D for high-luminosity LHC (HL-LHC) detector upgrades are an appealing perspective. In particular, the possibility to equip the backing part of the CMS forward calorimeter is being investigated. Such high-rate application will put strong stability constraints on resistive Micromegas, making the optimisation work mentioned above even more relevant.
 
 
 
