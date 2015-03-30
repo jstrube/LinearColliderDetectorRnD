@@ -1,0 +1,68 @@
+\section{LCSim}
+\subsection{Collaborating Institutions}
+
+The core software has been developed at SLAC. A number of packages were
+contributed by university and other national lab groups when such efforts were
+supported by DOE.
+
+\subsection{Introduction}
+\subsection{Recent Milestones}
+
+Simulation of physics processes and detector response is crucial to the design
+of new HEP experiments such as those proposed for the ILC. There are stringent
+requirements on the design of tools for detector R&D which differentiate them
+from typical experiment-specific simulation and reconstruction code. They must:
+\begin{itemize}
+\item allow easy reconfiguration to support different detector geometries and technologies,
+\item make it easy to develop, implement and compare new reconstruction algorithms,
+\item be very easy for users to set up and quickly become productive with,
+\item work on a wide variety of operating systems and computing platforms,
+\item be easy to develop and support using a fraction of the manpower that would be available to an established experimental collaboration.
+\end{itemize}
+The lcsim physics and detector response simulation and event reconstruction
+toolkit was developed at SLAC to provide a flexible and performant suite of
+software programs to allow fast and efficient studies of multiple detector
+designs for the ILC. The primary goal of the group has been to develop computing
+infrastructure to allow physicists from universities and other labs to quickly
+and easily conduct physics analyses and contribute to detector R&D. These tools
+include the Geant4-based detector response simulation program (slic), and the
+Java-based reconstruction and analysis tools (org.lcsim) [1].
+￼
+\subsection{Engineering Challenges}
+
+The lcsim software pioneered the use of runtime-defined detector geometries.
+Although LCIO [2] provided a common event data model for all ILC groups, the
+community was never able to agree upon a common geometry system for both
+simulation and reconstruction. DD4hep [3] is an effort within the AIDA Common
+Software Tools project to provide such functionality. Although it adopted many
+lcsim concepts, the implementation of the software has taken its own course. The
+largest challenge to the lcsim effort at the moment (beyond lack of funding) is
+to maintain some connection to the geometry definition functionality promised by
+DD4hep.
+
+\subsection{Future Plans}
+
+The core functionality is being kept current by upgrading to the latest versions
+of Geant4, etc. Due to lack of funding, the project is currently primarily
+responding to user requests for additional functionality.
+
+\subsection{Applications Outside of Linear Colliders}
+
+The flexibility and power of this simulation package make it not only useful for
+the application domain for which it was developed (viz. HEP collider detector
+physics), but also for other physics experiments, and could very easily be
+applied to other disciplines, e.g. biomedical or aerospace, to efficiently use
+the full power of the Geant4 toolkit to simulate the interaction of particles
+with fields and matter. The Heavy Photon Search experiment [4] at Thomas
+Jefferson National Laboratory has adopted slic as its detector response
+simulation package and the org.lcsim toolkit for its event reconstruction needs.
+Physics and detector studies for CLIC [5] and the Muon Collider [6] have also
+used both slic and the org.lcsim software. The software could be easily used for
+physics and detector studies at detectors at future circular colliders.
+
+
+[1] http://www.lcsim.org
+[2] http://lcio.desy.de/
+[3] http://aidasoft.web.cern.ch/DD4hep
+[4] https://confluence.slac.stanford.edu/display/hpsg/Heavy+Photon+Search+Experiment [5] http://clicdp.web.cern.ch/
+[6] http://map.fnal.gov/
