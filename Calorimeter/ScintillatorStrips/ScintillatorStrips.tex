@@ -1,8 +1,29 @@
 \section{Scintillator Strips}
 \subsection{Introduction}
+
+The CALICE scintillator strip-based ECAL (ScECAL) uses a scintillator  strip
+structure to deliver the granularity and resolution required of an ILC detector.
+Each strip is individually read out by a Multi Pixel Photon Counter (MPPC, a
+silicon photon detector produced by Hamamatsu Photonics K\.K\.~\cite{Gomi:2007zz}). Although
+plastic scintillators have been widely used in calorimeters, this is the first
+time that a highly granular calorimeter has been made using scintillator strips.
+Such an ECAL has a smaller cost than alternative technologies using silicon
+sensors (e.g.~\cite{1748-0221-3-08-P08001}). The MPPC has promising properties for the ScECAL: a small
+size (active area of $\unit[1 \times 1]{mm^2}$ in a package of $\unit[4.2 \times 3.2 \times 1.3]{mm^3}$), excellent
+photon counting ability, low cost and low operation voltage ($\unit[80]{V}$), with
+disadvantages of temperature-dependent gain, saturation at high light levels,
+and a relatively high dark noise rate. The use of tungsten absorber material
+minimises the Moliere radius of the calorimeter, an important aspect for the
+effective separation of particle showers required by PFA reconstruction. The
+chosen strip geometry allows a reduction in the number of readout channels,
+while maintaining an effective granularity given by the strip width, by the use
+of appropriate reconstruction algorithms. One such algorithm, know as the Strip
+Splitting Algorithm~\cite{Kotera2015}, has been developed and demonstrated to perform well in
+jets expected at ILC.
+
 \subsection{Recent Milestones}
 \begin{itemize}
-	\item introducing a new scintillation light readout scheme, with different scintillator strip shape  by having better homogeneity
+	\item introducing a new scintillation light readout scheme, with different scintillator strip shape by having better homogeneity
 	\item photo-sensor of increased number of pixels in 1mmx1mm, this leads larger dynamic range for the calorimeter
 	\item more experience on the FE read out board and ASICs
 \end{itemize}
@@ -23,6 +44,6 @@ They are not published yet, instead some proceedings
 
 \subsection{Applications Outside of Linear Colliders}
 \begin{itemize}
-	\item photo-sensor named MPPC from Hamamatsu photonics INC is employed for the T2K experiment, CMS upgrade (HC-CAL), BELLII detector (endocarp muon)
+	\item photo-sensor named MPPC from Hamamatsu photonics INC is employed for the T2K experiment, CMS upgrade (HC-CAL), BELLII detector (end-cap muon)
 	\item PET and SPECT development
 \end{itemize}
