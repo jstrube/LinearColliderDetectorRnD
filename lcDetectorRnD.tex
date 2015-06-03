@@ -18,10 +18,13 @@
 \usepackage[type1]{libertine}
 \usepackage[libertine]{newtxmath}
 \usepackage{bm}
+\usepackage{pdfpages}
 \usepackage{tabularx}
 \usepackage{booktabs}
-\usepackage{rotating}
+\usepackage{pdflscape}
 \usepackage{adjustbox}
+\usepackage{rotating}
+\usepackage{geometry}
 \usepackage[backend=biber,sorting=none]{biblatex}
 \addbibresource{detectorRnD.bib}
 %%% This makes a nice upright greek mu for use in units
@@ -52,34 +55,38 @@
 \tableofcontents
 % \listoftodos
 \chapter{Vertex Detector R\&D}
-% \input{VertexDetector/Chronopix/Chronopix}
-% \input{VertexDetector/CMOS/CMOS}
-% \input{VertexDetector/DEPFET/DEPFET}
-% \input{VertexDetector/FPCCD/FPCCD}
-% \input{VertexDetector/SOI/SOI}
+\input{VertexDetector/Motivation}
+\input{VertexDetector/Chronopix/Chronopix}
+\input{VertexDetector/CMOS/CMOS}
+\input{VertexDetector/DEPFET/DEPFET}
+\input{VertexDetector/FPCCD/FPCCD}
+\input{VertexDetector/SOI/SOI}
 \input{VertexDetector/VIP/VIP}
+\input{VertexDetector/CLICPIX/CLICPix}
 \newpage
-% \input{VertexDetector/CLICPIX/CLICPix}
+% \includepdf[pages={-},angle=90,pagecommand={\thispagestyle{empty}}]{VertexDetector/PixelsTable.pdf}
 \input{VertexDetector/PixelSummary}
-% \chapter{Tracking Detectors}
-% \input{Tracker/SCIPPTracking/SCIPPTracking}
-% \input{Tracker/KPIX/KPIX}
-% \input{Tracker/TPC/TPC}
-% \chapter{Calorimeter R\&D}
-% \input{Calorimeter/ScintillatorStrips/ScintillatorStrips}
-% \input{Calorimeter/SiliconTungstenILD/SiliconPads}
-% \input{Calorimeter/SiliconTungstenSiD/SiliconTungstenSiD}
-% \input{Calorimeter/DECAL/DECAL}
-% \input{Calorimeter/DHCAL/DHCAL}
-% \input{Calorimeter/GEM_HCAL/GEM_HCAL}
-% \input{Calorimeter/FCAL/FCAL}
-% \input{Calorimeter/AHCAL/AHCAL}
-% \input{Calorimeter/SDHCal/SDHCAL}
-% \input{Calorimeter/SDHCAL_GRPC/SDHCAL_GRPC}
-% \input{Calorimeter/DualReadout/DualReadout}
-% \chapter{Software Tools}
-% \input{Software/LCIO/LCIO.tex}
-% \input{Software/LCSim/LCSim.tex}
-% \input{Software/PandoraPFA/PandoraPFA.tex}
+\input{VertexDetector/ExecutiveSummary}
+\newpage
+\chapter{Tracking Detectors}
+\input{Tracker/SCIPPTracking/SCIPPTracking}
+\input{Tracker/KPIX/KPIX}
+\input{Tracker/TPC/TPC}
+\chapter{Calorimeter R\&D}
+\input{Calorimeter/ScintillatorStrips/ScintillatorStrips}
+\input{Calorimeter/SiliconTungstenILD/SiliconPads}
+\input{Calorimeter/SiliconTungstenSiD/SiliconTungstenSiD}
+\input{Calorimeter/DECAL/DECAL}
+\input{Calorimeter/DHCAL/DHCAL}
+\input{Calorimeter/GEM_HCAL/GEM_HCAL}
+\input{Calorimeter/FCAL/FCAL}
+\input{Calorimeter/AHCAL/AHCAL}
+\input{Calorimeter/SDHCal/SDHCAL}
+\input{Calorimeter/SDHCAL_GRPC/SDHCAL_GRPC}
+\input{Calorimeter/DualReadout/DualReadout}
+\chapter{Software Tools}
+\input{Software/LCIO/LCIO.tex}
+\input{Software/LCSim/LCSim.tex}
+\input{Software/PandoraPFA/PandoraPFA.tex}
 \printbibliography
 \end{document}
