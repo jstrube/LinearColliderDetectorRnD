@@ -53,7 +53,7 @@
 
 \begin{document}
 \tableofcontents
-% \listoftodos
+\listoftodos
 \chapter{Vertex Detector R\&D}
 \input{VertexDetector/Motivation}
 \input{VertexDetector/Chronopix/Chronopix}
@@ -64,13 +64,14 @@
 \input{VertexDetector/VIP/VIP}
 \input{VertexDetector/CLICPIX/CLICPix}
 \newpage
-% \includepdf[pages={-},angle=90,pagecommand={\thispagestyle{empty}}]{VertexDetector/PixelsTable.pdf}
+\includepdf[pages={-},angle=90,pagecommand={\thispagestyle{empty}}]{VertexDetector/PixelsTable.pdf}
 \input{VertexDetector/PixelSummary}
 \input{VertexDetector/ExecutiveSummary}
 \newpage
-\chapter{Tracking Detectors}
+\chapter{Silicon Tracking}
 \input{Tracker/SCIPPTracking/SCIPPTracking}
 \input{Tracker/KPIX/KPIX}
+\chapter{Gaseous Tracking}
 \input{Tracker/TPC/TPC}
 \chapter{Calorimeter R\&D}
 \input{Calorimeter/ScintillatorStrips/ScintillatorStrips}
@@ -84,6 +85,7 @@
 \input{Calorimeter/SDHCal/SDHCAL}
 \input{Calorimeter/SDHCAL_GRPC/SDHCAL_GRPC}
 \input{Calorimeter/DualReadout/DualReadout}
+\input{Calorimeter/CalorimeterSummary}
 \chapter{Software Tools}
 \input{Software/LCIO/LCIO.tex}
 \input{Software/LCSim/LCSim.tex}
