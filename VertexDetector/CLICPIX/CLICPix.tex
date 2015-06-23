@@ -68,7 +68,7 @@ consumption can be reduced to a value below the target of $\unit[50]{mW/cm^2}$
 by means of power gating for the analog part and clock gating for the digital part.
 Readout tests have confirmed that the CLICpix demonstrator chip
 is fully functional and the power consumption and performance are in agreement with
-simulations~\cite{clicpix-twepp-2013}.
+simulations~\cite{Valerio:1635171}.
 Hybrid modules of CLICpix ASICs with planar slim-edge
 sensor prototypes are currently in production.
 \item[Capacitively coupled active HV-CMOS sensors]
@@ -104,10 +104,10 @@ The detector performance requirements lead to challenging constraints
 for the mechanical and electrical integration of the vertex-detector
 components and its cooling system. An integrated approach is followed,
 addressing several of the critical R\&D issues in these domains:
-\begin{itemize}
-\item \emph{Power delivery and power pulsing.} A low-mass power-pulsing and power-delivery
+\begin{description}
+\item[Power delivery and power pulsing] A low-mass power-pulsing and power-delivery
 system optimised for the small duty cycle of the CLIC machine has been
-developed~\cite{fuentes-twepp2013}. Controlled current sources
+developed~\cite{1748-0221-8-01-C01057}. Controlled current sources
 deliver a low and almost constant current ($<\unit[300]{mA}$ per ladder)
 into the vertex region through low-mass cables. The energy needed by the readout ASICs during the time of the collisions
 and detector readout is stored locally in silicon capacitors. Low-dropout regulators provide the necessary stability
@@ -117,23 +117,23 @@ Prototypes have been tested successfully with dummy loads emulating the power co
 of the 12 readout ASICs in a half ladder. The total contribution of the
 powering infrastructure to the material budget of each barrel layer is
 approximately 0.1\%X$_0$. It is expected to decrease to less than $0.05\%$X$_0$ with evolving silicon-capacitor technology.
-\item \emph{Cooling.} Even with power pulsing a total power of approximately \unit[500]{W} will be dissipated in the vertex detectors alone. To limit the amount of material in the vertex-detector region, a cooling
+\item[Cooling] Even with power pulsing a total power of approximately \unit[500]{W} will be dissipated in the vertex detectors alone. To limit the amount of material in the vertex-detector region, a cooling
 system based on forced air flow is under development~\cite{DuarteRamos:1572989}. Finite-element Computational Fluid Dynamics (CFD) simulations show that air cooling is feasible. For a mass flow of \unit[20]{g/s}, the temperature increase
 in the vertex detector is limited to approximately \unit[40]{\textdegree C}. The proposed cooling scheme is being
 validated in thermal mockups. Preliminary results confirm the validity of the simulations.
-\item \emph{Mechanical supports.} The low overall material budget leaves only about 0.05\%X$_0$ per
+\item[Mechanical supports] The low overall material budget leaves only about 0.05\%X$_0$ per
 detection layer for mechanical supports. Prototypes based on Carbon-Fibre-Reinforced Polymers
 (CFRP) are under study~\cite{VillarejoBermudez:1982810}. Bending-stiffness calculations have been validated in
 finite-element simulations
 and with bending tests. Measurements within an air-cooling mockup show
 that the air-flow induced vibrations are at an acceptable level of approximately $\unit[1-2]{\micron}$ RMS
 amplitude for the direction perpendicular to the detector plane and at nominal flow conditions.
-\item \emph{Assembly and access scenarios.}
+\item[Assembly and access scenarios]
 Assembly and access scenarios for in-situ testing have been developed,
 taking into account the constraints from the surrounding detector elements~\cite{VillarejoBermudez:1982810}.
 Realistic cabling layouts are proposed and evaluated in terms of their impact on the
 global and local material budget.
-\end{itemize}
+\end{description}
 \subsection{Future Plans}
 The technical development programme for the CLIC vertex detector aims at building
 demonstration modules for the main components of the vertex detector system
@@ -158,57 +158,3 @@ Accelerators~\cite{AIDA2020}.
 Moreover the CLICpix ASIC is derived from the
 Timepix/Medipix family of hybrid readout ASICs~\cite{medipix-collaboration}, which have a wide range of applications in
 medical imaging and material science.
-
-% \begin{sidewaystable}
-% \begin{tabular}{|L{2cm}| L{4cm}| L{5cm}| L{7cm}| L{4cm}|}  \hline
-%  \bf R\&D technology & \bf Participating Institutes &  \bf Description / Concept & \bf Milestones & \bf Future Activities \\ \hline
-%  CLICpix &
-% Cambridge University,
-% CERN,
-% University of Geneva,
-% Karlsruhe Institute of Technology (KIT),
-% University of Liverpool,
-% SLAC,
-% Institute of Space Science Bucharest,
-% Spanish Network for Linear Colliders
-%   &
-%  Hybrid pixel-detector technology comprising fast, low-power and small-pitch readout
-% ASICs implemented in 65 nm CMOS technology (CLICpix) coupled to ultra-thin planar
-% or active HV-CMOS sensors via low-mass interconnects. &
-% Beam tests of prototype assemblies with ultra-thin sensors (50-300 \micron);
-% CLICpix demonstrator ASIC in 65~nm technology;
-% Beam tests of assemblies with capacitive coupling between CCPDv3 HV-CMOS active sensors
-% and CLICpix ASICs;
-% Power-pulsing demonstrator with dummy loads;
-% Prototypes of carbon-fibre ladder supports;
-% Full-scale thermal mockup of the CLIC vertex-detector region.
-% &
-% Demonstration modules for all major components
-% in time for the next update of the European Strategy
-% for Particle Physics in 2018/19
-%  \\  \hline
-%   \end{tabular}
-%
-% \end{sidewaystable}
-
-% % add references
-% \begin{thebibliography}{99}
-%
-% \bibitem{CLICdp-collaboration}
-% CLICdp collaboration, \href{http://clicdp.web.cern.ch}{http://clicdp.web.cern.ch}
-%
-% \bibitem{HVCMOS}  I. Peric et al.,
-%   \emph{High-voltage pixel detectors in commercial CMOS technologies for ATLAS, CLIC and Mu3e experiments},
-%  NIM~{\bf A731} (2013) 131, \href{http://dx.doi.org/10.1016/j.nima.2013.05.006}{10.1016/j.nima.2013.05.006}.
-%
-% \bibitem{RD53}
-% RD53 collaboration, \href{http://rd53.web.cern.ch/}{http://rd53.web.cern.ch/}.
-%
-% \bibitem{AIDA2020}
-% AIDA2020 Advanced European Infrastructures for Detectors at
-% Accelerators, \href{http://aida2020.web.cern.ch/}{http://aida2020.web.cern.ch/}.
-%
-% \bibitem{medipix-collaboration}
-% Medipix project, \href{https://medipix.web.cern.ch/medipix/index.php}{https://medipix.web.cern.ch/medipix/index.php}.
-% %\printbibliography[title=References]
-% \end{thebibliography}
