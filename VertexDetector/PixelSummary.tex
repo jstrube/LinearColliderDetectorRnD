@@ -1,9 +1,10 @@
-\newgeometry{margin=2cm} % modify this if you need even more space
+\thispagestyle{empty}
+\newgeometry{margin=1.5cm} % modify this if you need even more space
 \begin{landscape}
-\begin{table}[h]
+\begin{sidewaystable}
     \centering
-    \begin{adjustbox}{max width=1\textwidth}
-\begin{tabularx}{2\textwidth}{lXXXX}
+    \begin{adjustbox}{max width=1.1\textwidth,totalheight=1\textheight}
+\begin{tabularx}{2\textheight}{lXXXX}
     \toprule
     R\&D Technology & Participating Institutes & Description / Concept & Milestones & Future Activities \\
     \midrule
@@ -121,6 +122,6 @@
     \bottomrule
 \end{tabularx}
 \end{adjustbox}
-\end{table}
+\end{sidewaystable}
 \end{landscape}
 \restoregeometry
