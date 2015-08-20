@@ -63,24 +63,25 @@ and neutrino-induced events in liquid argon time projection chambers, having
 significant impact in the neutrino-physics community.
 
 \begin{figure}
-\includegraphics{Software/PandoraPFA/JetEnergyResolution}
-\caption{Jet energy resolution as a function of jet energy, including a breakdown of the
-resolution into contributing “confusion” terms. Illustrates performance of
-Pandora algorithms for ILD\_o1\_v06 with Silicon (Si) or Scintillator (Sc) as ECAL
-active material.}
-\label{fig:Software:PandoraPFA:JetEnergyResolution}
+	\begin{minipage}{.49\linewidth}
+		\includegraphics[width=\linewith]{Software/PandoraPFA/JetEnergyResolution}
+		\caption{Jet energy resolution as a function of jet energy, including a breakdown of the
+		resolution into contributing “confusion” terms. Illustrates performance of
+		Pandora algorithms for ILD\_o1\_v06 with Silicon (Si) or Scintillator (Sc) as ECAL
+		active material.}
+		\label{fig:Software:PandoraPFA:JetEnergyResolution}
+	\end{minipage}\hfill
+	\begin{minipage}{.49\linewidth}
+		\includegraphics[width=\linewidth]{Software/PandoraPFA/ECAL_CellSize}
+		\caption{Jet energy resolution as a function of the ECAL cell size, for \unit[250]{GeV} jets in
+		ILD\_o1\_v06. As expected, the photon confusion term (ability to separate photons
+		from nearby hadrons) drives performance changes.}
+		\label{fig:Software:PandoraPFA:ECAL_CellSize}
+	\end{minipage}
 \end{figure}
 
 \begin{figure}
-\includegraphics{Software/PandoraPFA/ECAL_CellSize}
-\caption{ Jet energy resolution as a function of the ECAL cell size, for \unit[250]{GeV} jets in
-ILD\_o1\_v06. As expected, the photon confusion term (ability to separate photons
-from nearby hadrons) drives performance changes.}
-\label{fig:Software:PandoraPFA:ECAL_CellSize}
-\end{figure}
-
-\begin{figure}
-\includegraphics{Software/PandoraPFA/HCAL_Layers}
+\includegraphics[width=.5\linewidth]{Software/PandoraPFA/HCAL_Layers}
 \caption{Jet energy resolution as a function of the number of layers in the HCAL, for a range of different energy jets in ILD\_o1\_v06.}
 \label{fig:Software:PandoraPFA:HCalLayers}
 \end{figure}

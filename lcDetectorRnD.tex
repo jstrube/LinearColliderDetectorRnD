@@ -25,6 +25,7 @@
 \usepackage{adjustbox}
 \usepackage{geometry}
 \usepackage[backend=biber,sorting=none]{biblatex}
+\usepackage{xspace}
 \addbibresource{detectorRnD.bib}
 %%% This makes a nice upright greek mu for use in units
 \makeatletter
@@ -48,7 +49,7 @@
     \printfield{year}%
     \finentry%
 }
-\newcommand{\micron}{\ensuremath{\mu\mathrm{m}}}
+\newcommand{\micron}{\ensuremath{\mu\mathrm{m}}\xspace}
 
 \begin{document}
 \begin{titlepage}
@@ -96,6 +97,7 @@
 \input{Calorimeter/CalorimeterSummary}
 \chapter{Forward Calorimeters}
 \input{Calorimeter/FCAL/FCAL}
+\input{Calorimeter/FCALSummary}
 \chapter{Software Tools}
 \input{Software/LCIO/LCIO}
 \input{Software/LCSim/LCSim}
