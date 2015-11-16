@@ -19,6 +19,8 @@ implemented in prototype 3. For comparison, option 1 is the same as in prototype
     \item We have proven that we can record time stamps in every pixel with time resolution down to \unit[150]{ns}.
     \item We have tested sparse readout, allowing to read only pixels with hits, thus reducing readout time to the level allowing readout of all pixels in the sensor in the intervals between bunch crossings.
     \item We have tested pulsed power for the analog part of the pixels and have proven~\cite{sinev:Chronopix:FirstPrototype} that turning power ON about \unit[100]{$\mu$s} before bunch train and turning it off between bunch trains does not create any problems for threshold setting accuracy in the comparators.
+    \item We have measured sensor noise level, including all pick-up and cross-talk. It was 24 e- r.m.s in prototype 1 and 26 e- r.m.s. in prototype 3, sensor option 3. Our specification was 25 e-.
+noise.
     \item We have tested the idea of building all in-pixel electronics only from NMOS transistors, thus eliminating the need for a special process (deep p-well) to protect signal charge from parasitic collection by in-pixel transistors. We have proven~\cite{sinev:Chronopixel:RnDstatus2013} that all NMOS electronics can be built in this way, and that this does not significantly increase the power consumption compared to CMOS electronics.
     \item We have tested the compensation of comparator offsets using analog calibration, when the value of the offset is stored as a voltage on the capacitor in each pixel. This has an advantage over digital calibration (where the offset value is stored as code in the special register) in that there are no discrete levels, and the accuracy of such a calibration scheme is not affected by the size of the register or the spread of the initial offsets.
 \end{itemize}
@@ -28,7 +30,7 @@ implemented in prototype 3. For comparison, option 1 is the same as in prototype
     \item A new contract with Sarnoff for the design of prototype 3 was signed in August 2013.
     \item Prototype 3 was manufactured in September 2014. Tests have shown that problems revealed in prototype 2 were solved.
 \end{itemize}
-The most recent report~\cite{sinev:Chronopixel:status2014} on the status of ChronoPixel was presented by N.~Sinev in April 2015 at ALCW in Tsukuba, Japan.
+The most recent report~\cite{sinev:POS:Vertex2105} on the status of ChronoPixel was presented by N.~Sinev in June 2015 at Vertex2015 in Santa Fe, New Mexico.
 
 \subsection{Engineering Challenges}
 \begin{itemize}
