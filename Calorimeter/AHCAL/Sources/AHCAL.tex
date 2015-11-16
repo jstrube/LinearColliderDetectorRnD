@@ -9,6 +9,11 @@ The development of engineering solutions for a realistic detector is on its way.
 The following institutes contribute to the AHCAL effort:
 DESY, MPI for Physics, Munich, Hamburg, Heidelberg, Mainz and Wuppertal Universities (Germany), CERN (Switzerland), OMEGA, Palaiseau (France), IPASCR Prague (Czech Republic), ITEP, MEPHI Moscow, JINR Dubna (Russia), Bergen (Norway), Northern Illinois University (USA), SKKU Seoul (Korea), Shinshu and Tokyo Universities (Japan).
 
+\subsubsection{The AHCAL in ILD and SiD}
+The AHCAL prototype development follows the ILD detector design, and the performance studies, which guide the R\&D, are performed in the ILD concept. The detailed AHCAL simulation, as implemented in the ILD, has been shown to reproduce test beam results, and the components realised in prototypes are represented in the engineering model of ILD. There is close consultation between CALICE and the concepts on prioritising the R\&D which is still needed on the way to a realistic technical proposal. 
+
+The AHCAL also constitutes an option for the hadronic calorimeter of the SiD concept. It is straightforward to transfer the technical and integration solutions developed in the ILD context to SiD, because the basic geometry and the routing of signals are very similar. However, the detailed integration of the AHCAL in the engineering model and in the simulation is not yet as advanced as for ILD. For example, the optimisation of the cell size still needs to be done for the SiD case with its smaller detector radius and the more finely segmented ECAL. Steps are being taken on the software side, but the engineering support is sub-critical. There is regular exchange between CALICE and SiD on these issues, both the conceptual as well as on the technical level.
+
 \subsection{Recent Milestones; past and present R\&D}
 \subsubsection{Test beam data analysis}
 The following results using data taken with the first AHCAL ``physics'' prototype in 2006 -- 2011 at CERN and Fermilab have been published in peer-reviewed journals:
@@ -52,13 +57,28 @@ We finally note that test beam analysis plays an important role in training our 
 \subsubsection{Optimization of the scintillator SiPM read-out cell}
 \label{sec:OptimizationSiPMRO}
 
-As a consequence of the wide success of SiPM applications in other fields, e.g. in medical imaging, the development of improved sensors is dynamically pursued in industry, and several groups are in close contact with leading producers. Progress has been made in terms of dark rate, noise above MIP threshold and dynamic range. In addition, the samples are much more homogeneous than at the time of the first prototype, which results in a simplification of commissioning and calibration procedures.
+As a consequence of the wide success of SiPM applications in other fields, e.g. in medical imaging, the development of improved sensors is dynamically pursued in industry, and several groups are in close contact with leading producers. Progress has been made in terms of dark rate, noise above MIP threshold and dynamic range, see Fig.~\ref{fig:SiPM/noise}. For comparison, typical SiPMs in the first generation prototype at an the first generation had a dark rate of about 2 MHz and a cross talk probability of about 25\%. In addition, the samples are much more homogeneous than at the time of the first prototype, which results in a simplification of commissioning and calibration procedures.
+%
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.5\hsize]{DarkCount.pdf}
+\end{center}
+\caption{\label{fig:SiPM-noise} Dark count rate of recent SiPMs, MPPC devices by Hamamatsu, without (standard) and with (new) inter-pixel cross talk suppression. ({\it Courtesy MPI for Physics, Munich})}
+\end{figure}
 
-In the time since the TDR, tile SiPM cells without wave-length shifting fiber have been developed. One is based on machined, individually wrapped scintillator plates (Hamburg), the other one on injection-molded tiles. Both are using sensors from KETEK, those on the molded tile have a very large dynamic range. 300 devices have been produced and tested, and more than thousand devices have been produced and tested with semi-automatic procedures at Hamburg and Heidelberg. They been integrated into the test beam set-up and tested at DESY and CERN in 2014 and 2015. This version is a good candidate for a baseline design for a full detector, but more data taking and analysis is needed.
+In the time since the TDR, tile SiPM cells without wave-length shifting fiber have been developed. One is based on machined, individually wrapped scintillator plates (Hamburg), the other one on injection-molded tiles. Both are using sensors from KETEK, those on the molded tile have a very large dynamic range. 300 devices have been produced and tested, and more than thousand devices have been produced and tested with semi-automatic procedures at Hamburg and Heidelberg. They been integrated into the test beam set-up and tested at DESY and CERN in 2014 and 2015. This version is a candidate for a baseline design for a full detector, but more data taking and analysis is needed.
 
 Industrialisation of the SiPM and tile design and production procedures is now actively being addressed, and first assemblies with industrial facilities such as automatic pick-and-place machines have been made. This needs to be continued in the coming years, fed back into the cell optimization, and awaits a feasibility demonstration at larger scale.
 
-An alternative cell design, with photo-sensors integrated in the read-out electronics board, has been proposed some time ago, and the detailed development of the corresponding sensor and scintillator configuration is now being pursued. It has the potential to result in further simplifications (which should be read as cost and time savings), but poses higher performance requirements to the SiPM -- which can now be met --  and raises new issues in the quality assurance and integration chain. The goal is to fully develop such an alternative solution in the next 2 years.
+An alternative cell design, with photo-sensors integrated in the read-out electronics board, has been proposed some time ago, and the detailed development of the corresponding sensor and scintillator configuration is now being pursued. It has the potential to result in further simplifications (which should be read as cost and time savings), but poses higher performance requirements to the SiPM -- which can now be met --  and raises new issues in the quality assurance and integration chain. The goal is to fully develop such an alternative solution in the next 2 years. A prototype of this design is shown in Fig.~\ref{fig:SM-HBU} and has already been successfully operated in the 2014 and 2015 test beam campaign.
+%
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.5\hsize]{surface-mounted-tiles.jpg}
+\end{center}
+\caption{\label{fig:SM/HBU} AHCAL read-out board with surface-mounted SiPMs and tiles. ({\it Courtesy University of Mainz})}
+\end{figure}
+
 
 \subsubsection{Electronics and active layer integration}
 
@@ -68,11 +88,21 @@ The main difference between the integrated electronics and that of the physics p
 
 Further R\&D in the next years has to be done both on the ASIC and on the PCB. For the ASIC, development of a 3rd generation ROC chip will start after fixing open issues with the 2nd generation. The 3rd will have a more robust slow control architecture and possibly channel-wise buffer management which improves rate capabilities. In parallel, an alternative design of the analog part, which can handle a larger range of sensor gain needs to be complemented with a digital part.
 
-The PCB with integrated photo-sensors, as counterpart of the corresponding tile design (see \ref{sec:OptimizationSiPMRO}), has been developed, taking automatic production and quality assurance into account. The PCB is also one of the main cost drivers of a particle flow HCAL. Dedicated R\&D, in close cooperation with industrial manufacturers, is necessary to bring the cost down. First contacts have been made, and new prototype boards have been manufactured in Korea. 
+The PCB with integrated photo-sensors, as counterpart of the corresponding tile design (see \ref{sec:OptimizationSiPMRO}), has been developed, taking automatic production and quality assurance into account. The PCB is also one of the main cost drivers of a particle flow HCAL. Dedicated R\&D, in close cooperation with industrial manufacturers, is necessary to bring the cost down. First contacts have been made, and new prototype boards have been manufactured in Korea.
 
 \subsubsection{System integration}
 
-While the integration of layers is well advanced, that of entire stacks or modules has only begun. Since the TDR release, efforts concentrated on developing a multi-layer DAQ capable of reading larger systems. This was ready for beam tests at CERN  in fall 2014. It involves integration of a dedicated module data concentrator, which collects signals from all layers for sending them to the off-detector data receiver.
+While the integration of layers is well advanced, that of entire stacks or modules has only begun. Since the TDR release, efforts concentrated on developing a multi-layer DAQ capable of reading larger systems. This was ready for beam tests at CERN  in fall 2014,
+see Fig.~\ref{fig:stack}. It involves integration of a dedicated module data concentrator, which collects signals from all layers for sending them to the off-detector data receiver.
+%
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.7\hsize]{AHCAL-stack.jpg}
+\end{center}
+\caption{\label{fig:stack} AHCAL stack with integrated read-out electronics and data concentrator for two complete modules.({\it Courtesy DESY})}
+\end{figure}
+
+
 
 Further work will be required to integrate the HCAL DAQ into a higher level system for the purpose of combined beam tests, for example with a tracking device for uniformity studies, or with an ECAL for inter-calibration and combined performance. The same is true for slow control data.
 
@@ -98,12 +128,12 @@ The absorber structure bears more challenges than for conventional hadronic calo
 
 These structures need to be investigated with respect to their robustness against earthquakes. Simulations of the whole ILD structure have been made, and measurements on the test structures exposed to accelerating forces should be done in order to check the simulations.
 
-As enough active elements become available for instrumenting several active layers at full size, the thermal simulations should be verified with measurements, too. This will constitute an important step in system integration, as it addresses the issues associated with large layers and in particular power distribution, power cycling and heat dissipation. 
+As enough active elements become available for instrumenting several active layers at full size, the thermal simulations should be verified with measurements, too. This will constitute an important step in system integration, as it addresses the issues associated with large layers and in particular power distribution, power cycling and heat dissipation.
 
 \subsection{Summary}
 The AHCAL effort has produced a number of significant results in the time since the ILC TDR:
 \begin{itemize}
-\item Publication of 5 journal papers and 4 preliminary results in the form of internally reviewed notes, on Geant 4 validation with pions and protons in steel and tungsten, including new observables like track segments
+\item Publication of 6 journal papers and 3 preliminary results in the form of internally reviewed notes, on Geant 4 validation with pions and protons in steel and tungsten, including new observables like track segments
 \item Development, production and beam test of a new, simplified tile SiPM system without wave-length shifting fibers and improved sensor performance
 \item Test with electron and hadron beams of a partially instrumented realistic absorber structure  with second generation electronics, DAQ and services
 \end{itemize}
@@ -139,8 +169,8 @@ Electronics:
 
 System integration:
 \begin{itemize}
-\item Scalable DAQ
-\item Module level data collector
+%\item Scalable DAQ
+%\item Module level data collector
 \item Integration of DAQ and slow control into higher level system
 \item Implementation of temperature compensation scheme
 \item Power supply system
@@ -166,4 +196,3 @@ Particular engineering challenges are
 \item Assess and ensure earthquake stability of the absorber structure whilst maintaining a minimum of dead material
 \item Developing an active layer element consisting of tiles, SiPMs and readout electronics that can be automatically assembled, including production and quality assurance procedures
 \end{itemize}
-
