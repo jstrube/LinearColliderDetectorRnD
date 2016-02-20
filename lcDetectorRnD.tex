@@ -10,8 +10,7 @@
 %%% The next two are necessary to get the degree symbol in text and math mode
 \usepackage{textcomp}
 \usepackage{gensymb}
-\usepackage[colorlinks=true,urlcolor=cyan]{hyperref}
-\usepackage[obeyFinal,colorinlistoftodos]{todonotes} %add final to documentclass options to turn off todos
+\usepackage[colorlinks=true,urlcolor=cyan,plainpages=false]{hyperref}
 \usepackage{units}
 % for chemical symbols, relevant for gas mixes, for example
 \usepackage[version=3]{mhchem}
@@ -26,6 +25,7 @@
 \usepackage{geometry}
 \usepackage[backend=biber,sorting=none]{biblatex}
 \usepackage{xspace}
+% \usepackage{siunitx}
 \usepackage{heppennames2}
 \addbibresource{detectorRnD.bib}
 %%% This makes a nice upright greek mu for use in units
@@ -63,7 +63,6 @@
     \end{center}
 \end{titlepage}
 \tableofcontents
-\listoftodos
 \chapter{Vertex Detectors}
 \input{VertexDetector/Motivation}
 \input{VertexDetector/Chronopix/Chronopix}
@@ -84,6 +83,7 @@
 \input{Tracker/SiTrackingSummary}
 \chapter{Gaseous Trackers}
 \input{Tracker/TPC/TPC}
+\input{Tracker/TPC_Bonn/TPC_Bonn}
 \input{Tracker/TPCSummary}
 \chapter{Calorimeters}
 \input{Calorimeter/ScintillatorStrips/ScintillatorStrips}
