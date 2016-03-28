@@ -5,12 +5,12 @@ Contact person: Klaus Desch (email: desch@physik.uni-bonn.de)\\
 To make the most of the fine pitches of the Micropattern Gaseous Detectors the
 readout structure should be adapted to the same feature size. Therefore,
 readout ASICs of silicon pixel detectors such as the Timepix ASIC
-\cite{TPC_pixel_Timepix} can be placed directly below the gas amplification
+\cite{Llopart2007485,Llopart2008106} can be placed directly below the gas amplification
 stage. In this setup, the bump bond pads normally used to connect the readout
 chip to the Si-sensor are used as charge collection pads. In some studies a
-triple GEM was used as a gas amplification stage \cite{TPC_pixel_GEM_TP_1},
-\cite{TPC_pixel_GEM_TP_2}, while in others a Micromegas has been built
-directly on the ASIC \cite{TPC_pixel_InGrid}. The latter detector type is
+triple GEM was used as a gas amplification stage \cite{Bamberger:2006xp},
+\cite{6359808}, while in others a Micromegas has been built
+directly on the ASIC \cite{Chefdeville2006490}. The latter detector type is
  called GridPix and is produced with a post-processing technique, which
  guarantees a high quality grid well aligned with the readout pixels. This
  alignment ensures that the complete charge avalanche initiated by a primary
@@ -21,7 +21,7 @@ directly on the ASIC \cite{TPC_pixel_InGrid}. The latter detector type is
  of Bonn has modified the
  production process together with the Fraunhofer Institut IZM so that a
  wafer-based production of GridPix detectors is standard by now
- \cite{TPC_pixel_InGrid_prod}. First tests were done with both
+ \cite{Koppert2013245}. First tests were done with both
  gas amplification stages by using single ASICs with an active area of about \SI{2}{\centi\meter\squared}. The detectors were operated in laboratories at Nikhef, Saclay, Bonn,
  Freiburg and Siegen to test the working principle. It could be demonstrated
  that the transverse spatial resolution of the reconstructed primary electrons
@@ -41,7 +41,7 @@ detectors. The new GridPixes were also assembled in 8
 GridPix modules for the Large Prototype detector at DESY. Successful test beam
 campaigns were performed in 2010 with a single module and in 2013 and 2014
 with two modules
-\cite{TPC_pixel_1LPmodule}. The latest work was focused on three LP modules
+\cite{1748-0221-9-01-C01033}. The latest work was focused on three LP modules
 with a total of 160 GridPixes. The central module is equipped with 96
 GridPixes and the two outer modules have 32 GridPixes arranged to maximize the
 lever arm.
@@ -73,7 +73,7 @@ Nikhef and Bonn have also taken part in designing a successor ASIC of
 the currently used Timepix. The new Timepix-3 features several improvements,
 which promises a much better performance. In particular it is multi-hit capable,
 can record both time and charge of each signal, has a much faster
-digitization frequency (\SI{640}{\mega\hertz}) and can be read out  quasi continuously.
+digitization frequency (\unit[640]{MHz}) and can be read out  quasi continuously.
 A first beam test of two single TimePix-3 ASICs covered with a Micromegas
 grid took place in August 2015 at CERN SPS.
 
@@ -91,9 +91,9 @@ Fraunhofer institute IZM at Berlin and yields up to 428 GridPixes per batch (4 w
 Nikhef developed (partially funded by the AIDA FP7 project) the SPIDR fast readout system for Timepix-3 ASICs.
 
 \item The distribution of the LV power to all ASICs which can reach peak values
-of \SI{85}{\ampere} at \SI{2.2}{\volt} was designed.
+of \unit[85]{A} at \unit[2.2]{V} was designed.
 
-\item Cooling of the ASICs was done by cold water. However in future also 2-phase CO$_2$ cooling will be implemented.
+\item Cooling of the ASICs was done by cold water. However in future also 2-phase \ce{CO2} cooling will be implemented.
 \end{enumerate}
 
 \subsubsection{Future Plans}
