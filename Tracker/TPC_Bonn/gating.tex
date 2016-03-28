@@ -11,9 +11,9 @@ Although this ion back flow is much suppressed for the MPGD technology, compared
 still cause significant distortion of tracks when the particle density is high.
 
 Because of the bunch-train structure of the ILC beams (i.e., a  train of ca. 1300 to 2600 bunches during
-about \SI{1}{\milli\second}
-and a train-repetition rate of \SI{5}{\hertz}), the ions flow back from the gas amplification and will form a few discs
-of about \SI{1}{\centi\meter} thickness in the TPC drift volume where they slowly drift toward the TPC central cathode.
+about \unit[1]{ms}
+and a train-repetition rate of \unit[5]{Hz}), the ions flow back from the gas amplification and will form a few discs
+of about \unit[1]{cm} thickness in the TPC drift volume where they slowly drift toward the TPC central cathode.
 There will be three such ion discs during one train of normal ILC operation, and each disk will modify the trajectory
 of the drifting electrons, resulting in the distortion of tracks. The simulations of this distortion at ILC
 were made by several people, details can be found in \cite{LC-DET-2012-079,Fujii_IonEffects}.
@@ -38,15 +38,15 @@ The actual amount of displacement should therefore be multiplied by the ratio of
 factor to the suppression factor of the ion backflow of the MPGD system. Since the suppression factor by the
 MPGD system has been measured to be in the order of order 10$^{-3}$ at
 best \cite{Fujii_IonEffects}, the ratio will be larger than one for a gas gain of a few thousand, and distortions larger
-than \SI{60}{\micro\meter} in some parts of TPC would be expected.
+than \unit[60]{\micro m} in some parts of TPC would be expected.
 
-At the ILC a TPC point resolution of \SI{100}{\micro\meter} or better is required by the physics. Thus it is
+At the ILC a TPC point resolution of \unit[100]{\micro m} or better is required by the physics. Thus it is
 necessary to either install an efficient gating device to block the ions from the gas amplification, or to correct
 the track distortion. Because the machine backgrounds at ILC may not be stable enough to make a reliable
 correction possible, an efficient gating device will be needed. Fortunately the bunch-train configuration of ILC
-has an ideal time structure for ion gating. The positive ions drift back around \SI{5}{\milli\meter} during
-the \SI{1}{\milli\second} bunch-crossing period, and can be absorbed by the ion gate which is `closed' (explanation
-below) during next \SI{200}{\milli\second} between the bunch trains.
+has an ideal time structure for ion gating. The positive ions drift back around \unit[5]{mm} during
+the \unit[1]{ms} bunch-crossing period, and can be absorbed by the ion gate which is `closed' (explanation
+below) during next \unit[200]{ms} between the bunch trains.
 
 For the expected particle density at ILC, the track distortion by the
 {\em{primary}} ions produced in the LCTPC volume is small and has negligible effect.
@@ -98,13 +98,13 @@ GEM holes of the honeycomb shape with very thin rims would maximize the optical 
 \begin{figure}[htb!]
 \begin{center}
 \includegraphics[width=\columnwidth]{Tracker/TPC_Bonn/plots/TPC-Gate_Fig3gating.pdf}%
-\caption{\label{Fig3gating} {The electron transmission simulated for a gate-GEM with the honeycomb-shaped holes of pitch \SI{100}{\micro\meter} and rim width \SI{10}{\micro\meter}.}}
+\caption{\label{Fig3gating} {The electron transmission simulated for a gate-GEM with the honeycomb-shaped holes of pitch \unit[100]{\micro m} and rim width \unit[10]{\micro m}.}}
 \end{center}
 \end{figure}
 
 As is seen the simulation results shown in Fig.~\ref{Fig3gating}, the thin gate GEM with
-honey\-comb-shaped holes of \SI{100}{\micro\meter} pitch and \SI{10}{\micro\meter} rim width is shown to reach
-an electron transmission of \SI{80}{\percent}. However, a rim width of \SI{10}{\micro\meter} turns out to be very difficult to produce;
+honey\-comb-shaped holes of \unit[100]{\micro m} pitch and \unit[10]{\micro m} rim width is shown to reach
+an electron transmission of 80\%. However, a rim width of \unit[10]{\micro m} turns out to be very difficult to produce;
 an alternative is presented in the next subsection.
 
 \subsubsection{Recent Milestones}
@@ -113,7 +113,7 @@ In 2013 the Japanese LCTPC group started the actual fabrication of the GEM gate 
 optical transmission. With the limitations of the available processes of GEM, the specifications
 were set using  Fig.~\ref{Fig45gating}(lower)
 which are summarized in the Table 1. The target is to fabricate a gate GEM with  honeycomb shape holes
-of around \SI{300}{\micro\meter} diameter and  rim-width of \SI{35}{\micro\meter} or smaller. The immediate goal
+of around \unit[300]{\micro m} diameter and  rim-width of \unit[35]{\micro m} or smaller. The immediate goal
 of this study is to test the Asian LP module with this GEM gate in the DESY test beam in 2016.
 
 \begin{table}[]
@@ -123,12 +123,12 @@ of this study is to test the Asian LP module with this GEM gate in the DESY test
 Item & Specification \\%$\sim$
 \hline
 \hline
-Optical aperture ratio &  \SI{80}{\percent} \\
-Hole size       & \SI{300}{\micro\meter}\\
-Hole pitch       & \SI{335}{\micro\meter}\\
-Rim size            & \SI{35}{\micro\meter}  \\
-Insulator thickness  & \SI{25}{\micro\meter}\\
-Foil size            & \SI{170x220}{\milli\meter} \\
+Optical aperture ratio &  80\% \\
+Hole size       & \unit[300]{\micro m}\\
+Hole pitch       & \unit[335]{\micro m}\\
+Rim size            & \unit[35]{\micro m}  \\
+Insulator thickness  & \unit[25]{\micro m}\\
+Foil size            & $170\times\unit[220]{mm}$ \\
 \hline
 \end{tabular}
 \caption{\label{gatespecs} Specification of the gate-GEM in the current study.}
@@ -160,8 +160,8 @@ according to the specifications in Table \ref{gatespecs}.
 \begin{center}
 \includegraphics[width=\columnwidth]{Tracker/TPC_Bonn/plots/TPC-Gate_Fig45gating.pdf}%
 \caption{\label{Fig45gating} {Upper: Honeycomb hole structure of the gate-GEM.
-The pitch of the holes is \SI{335}{\micro\meter}, the rim width \SI{29}{\micro\meter}.
-The polyimide insulator is \SI{12.7}{\micro\meter} thick.
+The pitch of the holes is \unit[335]{\micro m}, the rim width \unit[29]{\micro m}.
+The polyimide insulator is \unit[12.7]{\micro m} thick.
 Lower: Preliminary results of the electron transmission measurement are compared to simulation
 as functions of the GEM voltage for two types of gate-GEMs. In the left panel are
 results for gate-GEM with round holes; in the right panel results for the gate-GEM with the honeycomb-shaped holes.}}
@@ -171,14 +171,14 @@ results for gate-GEM with round holes; in the right panel results for the gate-G
 
 The electron transmission was measured for these samples, and
 Fig.~\ref{Fig45gating}(lower) shows the results of the measurement compared to the simulation in magnetic fields
-of 0, 1 and \SI{3.5}{\tesla}. In the left panel, the results for the sample with round holes, and in the right panel
-for the sample with honeycomb-shaped holes.  The electron transmissions at 0 and \SI{1}{\tesla} were confirmed
-to be better than \SI{80}{\percent} while the optical transmission was calculated to be \SI{82}{\percent} for the honeycomb-shaped-hole sample.
+of 0, 1 and \unit[3.5]{T}. In the left panel, the results for the sample with round holes, and in the right panel
+for the sample with honeycomb-shaped holes.  The electron transmissions at 0 and \unit[1]{T} were confirmed
+to be better than 80\% while the optical transmission was calculated to be 82\% for the honeycomb-shaped-hole sample.
 
 Having established the best configuration and the best process for the gate GEM with the small samples,
 the focus has now moved to the fabrication of the gate-GEM with  the size of the Asian GEM module (Fig.~\ref{Fig6gating}).
 Here the major issue for the fabrication is to minimize any defects in the electrode circuit of the gate-GEM
-so that there is \SI{100}{\percent} stopping power of the ions.
+so that there is 100\% stopping power of the ions.
 
 %Figure 6: A sample of the gate GEM for the Asian GEM module
 
