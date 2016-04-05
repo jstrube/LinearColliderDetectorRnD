@@ -1,0 +1,18 @@
+\section{LCFIPlus}
+
+\subsection{Introduction}
+In high-energy collider experiments, the identification of the jet flavor plays an important role in event reconstruction. The dominant decay signatures of top quarks and Higgs bosons include bottom (b) jets. Many new physics scenarios, such as those in supersymmetric theories, have discovery signatures involving third-generation quarks. Charged tracks resulting from bottom hadrons tend to have sizable impact parameters measured with respect to the primary vertex, and secondary vertices can be reconstructed from long-lived decays of heavy-flavored hadrons.
+
+The LCFIPlus package~\cite{Suehara:2015ura} builds upon the previous heavy flavor identification software, LCFIVertex~\cite{Bailey:2009ui}. The functionality has been improved, specifically for the reconstruction of multi-jet signatures, such as those encountered in the Higgs self-coupling analysis. LCFIPlus improves the efficiency of tagging bottom jets by first reconstructing secondary vertices, then clustering the event into jets taking into account the reconstructed objects. This strategy effectively prevents the splitting of secondary decays across multiple jets.
+
+\subsection{Recent Milestones}
+Recent major developments have focused on improving statistical methods for flavor tagging. Other developments include improvements to the interface to simplify the performance tuning for different detectors.
+Additionally, the development infrastructure was modernized to facilitate collaboration; the code is now hosted on github.
+
+\subsection{Engineering Challenges}
+Future challenges include integration with new geometry descriptions. Additionally, improvements are needed to the CPU performance, particularly the scaling behavior for large number of tracks.
+
+\subsection{Future Plans}
+Current developments focus on further improving the flavor tagging performance by using advanced reconstruction methods. Adaptive vertex fitting methods can further increase the efficiency of finding secondary vertices. Additionally, incorporating particle identification information from the tracking detectors, and adding information from $pi^0$ reconstruction allow to improve the vertex mass and hence the flavor tagging performance.
+
+% \subsection{Applications Outside of Linear Colliders}
