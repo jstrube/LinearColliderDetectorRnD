@@ -1,7 +1,7 @@
-\subsection{Electronics, DAQ and Cooling}\label{chap:TPC_sec:electronics}
+\section{Electronics, DAQ and Cooling}\label{chap:TPC_sec:electronics}
 Contact person: Leif J{\"o}nsson (email: leif.jonsson@hep.lu.se)\\
 
-\subsubsection{Introduction}
+\subsection{Introduction}
 The readout electronics for the TPC has to be adapted to the design of the tracking chamber and the beam structure of the collider. The physics goals of the ILC requires high momentum resolution and two-track separation, which drive the track reconstruction in the $r\text{-}\varphi$-plane to pad sizes of small dimensions. For the $r\text{-}z$-plane a short shaping time and a high sampling rate is necessary to provide the best possible timing information. However, at the same time the noise level has to be kept at a manageable level. The sampling depth has to match the sampling frequency in order to cover the full drift length. The front end electronics has to be accommodated within pad modules, with a channel occupancy that is smaller than the pad size to allow space for the mounting frame, the voltage supply and the cooling system.
 
 The power consumption of the front-end electronics should be kept low such that the heat dissipation does not lead to a temperature increase in the TPC-gas of more than typically \unit[1]{\textdegree C} and in order to minimize the cooling requirements. In this respect, power pulsing, where the front-end electronics is switched off for about \unit[199]{ms} between the bunch trains, helps significantly.
@@ -17,14 +17,11 @@ The readout electronics presently under development aims to demonstrate that the
 \noindent Cooling of the front end electronics is a challenge since the size of the cooling system must match the smallness of the electronics and still provide efficient cooling. The total power consumption of an MCM-board in continuous operation
 is \unit[3203]{mW} on the top side and \unit[3028]{mW} on the bottom side. In power pulsing mode, with a bunch train of \unit[725]{\micro s}, containing 1312 bunches, the power dissipation is reduced to about \unit[223]{mW} per MCM-board on the top side and \unit[48]{mW} on the bottom side. A cooling system with cooling pipes that run on top of the MCM-boards, using two-phase \ce{CO2} coolant, is considered. Another possibility would be to use micro-channel cooling, which has been developed by the semiconductor community. Such systems are presently further developed within the AIDA2020 project, for applications in high energy physics experiments. The ILC cycle is not realistic in a test beam environment as at e.g. DESY. To get a reasonable trigger rate is e.g. a cycle with \unit[5]{ms} beam at \unit[10]{Hz} more useful, which corresponds to \unit[343]{mW} per MCM-board on the top side and \unit[168]{mW} on the bottom side, in power pulsing mode.
 
-\subsubsection{Recent Milestones}
+\subsection{Recent Milestones}
 A test system has been built and a few mounted carrier boards have been produced, which are both under debugging. The design of the MCM-board in HDI-technology is ready and the production is awaiting the full characterisation of the carrier board. The design of the low voltage board is essentially ready. An MCM-development board, containing only one packaged SALTRO-chip, has been produced and has been used in the tests of the serial readout system. The tests were successful, although some further firmware development is needed for the full functionality. A cooling system using micro-channel cooling is under discussion within AIDA2020.
 
-\subsubsection{Engineering Challenges}
+\subsection{Engineering Challenges}
 The final aim is to produce front end electronics, high voltage supply and a cooling system which are compatible with a pad size of $1 \times \unit[6]{mm^2}$. The compactness of the electronics and the space limitations are major challenges, as well as designing a suitable and efficient cooling system. An elegant solution for the low voltage supply has to be found and due to space limitations the design of the mechanical support for the electronics is also a challenge.
 
-\subsubsection{Future Plans}
+\subsection{Future Plans}
 In the next future the characterisation of the carrier board will be completed, followed by the production of the MCM-board. One fully mounted MCM-board with eight carrier boards will be produced and tested. The firmware for the serial readout will be further developed and tested. Discussions concerning micro-channel cooling will continue and we hope to get help with the design and production of a prototype system by AIDA2020.
-
-\subsubsection{Applications Outside of Linear Colliders}
-The front end electronics, based on the SALTRO16-chip provides a very versatile system in the sense that it offers the possibility to set various readout parameters (polarity, shaping time, gain, decay time) in the SALTRO pre-amplifier. It is optimised for low capacitance detectors, sensitive to femtocoulomb signals with digital correction of the base line, followed by advanced pulse recognition and zero suppression.  In that sense the SALTRO-chip can be regarded as a highly sensitive 16 channel digital oscilloscope. The small units of the readout system are suitable for applications and detector R\&D in a variety of other fields like medical diagnostics, material science at XFEL, and for investigations at ESS.
