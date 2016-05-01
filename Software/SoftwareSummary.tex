@@ -2,32 +2,30 @@
 \newgeometry{margin=1.5cm} % modify this if you need even more space
 \begin{landscape}
     \centering
-    \begin{adjustbox}{max width=1.3\textwidth,totalheight=1.\textheight}
-\begin{tabularx}{1.2\textheight}{lXXXX}
+    \begin{adjustbox}{max width=1\textwidth,totalheight=1.\textheight}
+\begin{tabularx}{0.85\textheight}{lcXXX}
     \toprule
-    R\&D Technology & Participating Institutes & Description / Concept & Milestones & Future Activities \\
-    LCIO & SLAC, DESY & The LCIO software toolkit provides a common event data model (EDM) and persistency format for Linear Collider physics and detector simulations. & & \\
-    LCSim & SLAC & The software programs in the lcsim physics and detector response simulation and event reconstruction toolkit allow fast and efficient studies of multiple detector designs for the Linear Collider. & & \\
-    DD4HEP & CERN & DD4hep provides a generic, consistent and complete detector description, including geometry, materials, visualization, readout, alignment and calibration. It supports the full experiment life cycle: from detector concept development over detector optimization and construction to the operation phase. & & \\
-    Marlin & DESY & Marlin is a C++ application framework for processing LCIO event data files. & & Parallelization and adaptation to multi-core hardware \\
-    PandoraPFA & Cambridge & The PandoraPFA software package consists of a robust and efficient C++ software development kit (SDK) and
-    libraries of reusable pattern-recognition algorithms that exploit functionality
-    provided by the SDK. Algorithms have been developed to provide a particle flow
-    reconstruction of events in fine-granularity detectors, such as those proposed
-    for use at the Linear Collider. & & \begin{itemize} \item improvement
-    of $\pi^0$ reconstruction \item improve the ability to identify and
-    separate neutral hadrons from nearby charged hadrons. \end{itemize} \\
-    % \midrule
-    LCFIPlus &
-    Kyushu \newline
-    Tokyo \newline
-    PNNL \newline &
-    LCFIPlus consists of algorithms for vertex reconstruction, jet clustering, and flavor tagging. &
+    Technology & Institutes & Description / Concept & Milestones & Future Activities \\
+\midrule
+    LCIO & \multirow{2}{*}{\begin{tabular}{c}SLAC \\ DESY \end{tabular}}& Event data model (EDM) and persistency format& & \\
+    LCSim & SLAC & Physics and detector response simulation and event reconstruction toolkit & & \\
+    DD4HEP & CERN & Detector description, including geometry, materials, visualization, readout, alignment and calibration. & & \\
+    Marlin & DESY & C++ application framework for processing LCIO event data files. & & Parallelization and adaptation to multi-core hardware \\
+    PandoraPFA & Cambridge & Particle Flow reconstruction package, consisting of a software development kit and reconstruction libraries & & - improvement
+    of \PGpz reconstruction\newline - improve the ability to identify and
+    separate neutral hadrons from nearby charged hadrons. \\
+    LCFIPlus & \multirow{3}{*}{\begin{tabular}{c} Kyushu\\ Tokyo\\ PNNL \end{tabular}}
+    &
+    Vertex reconstruction, jet clustering, and flavor tagging toolkit &
     Development of a vertex-aware jet finder\newline
     Efficient flavor tagging in 6-jet events &
     Improvements to vertex reconstruction \newline
     Addition of particle ID to flavor tagging \newline
     Better integration with geometry description \\
+    Arbor & & & \\
+    Garlic & & & \\
+    ILCDIRAC & & &\\
+    Mokka & & & \\
     \bottomrule
 \end{tabularx}
 \end{adjustbox}

@@ -1,42 +1,17 @@
 \section{LCSim}
-% \subsection{Collaborating Institutions}
-%
-% The core software has been developed at SLAC. A number of packages were
-% contributed by university and other national lab groups when such efforts were
-% supported by DOE.
 
 \subsection{Introduction}
-\subsection{Recent Milestones}
-Simulation of physics processes and detector response is crucial to the design
-of new HEP experiments such as those proposed for the ILC. There are stringent
-requirements on the design of tools for detector R\&D which differentiate them
-from typical experiment-specific simulation and reconstruction code. They must:
-\begin{itemize}
-\item allow easy reconfiguration to support different detector geometries and technologies,
-\item make it easy to develop, implement and compare new reconstruction algorithms,
-\item be very easy for users to set up and quickly become productive with,
-\item work on a wide variety of operating systems and computing platforms,
-\item be easy to develop and support using a fraction of the manpower that would be available to an established experimental collaboration.
-\end{itemize}
 The lcsim physics and detector response simulation and event reconstruction
-toolkit was developed at SLAC to provide a flexible and performant suite of
-software programs to allow fast and efficient studies of multiple detector
-designs for the ILC. The primary goal of the group has been to develop computing
-infrastructure to allow physicists from universities and other labs to quickly
-and easily conduct physics analyses and contribute to detector R\&D. These tools
-include the Geant4-based detector response simulation program (slic), and the
-Java-based reconstruction and analysis tools (org.lcsim)~\cite{lcsimWebpage}.
+toolkit provides a suite of
+software programs to allow studies of multiple detector
+designs for the ILC. These tools
+include the Geant4-based detector response simulation program (slic), and the Java-based reconstruction and analysis tools (org.lcsim)~\cite{lcsimWebpage}.
+
+\subsection{Recent Milestones}
+{\color{red} Mile stones since the DBD}
 
 \subsection{Engineering Challenges}
-The lcsim software pioneered the use of runtime-defined detector geometries.
-Although LCIO~\cite{lcioWebsite} provided a common event data model for all ILC groups, the
-community was never able to agree upon a common geometry system for both
-simulation and reconstruction. DD4hep~\cite{dd4hepWebsite} is an effort within the AIDA Common
-Software Tools project to provide such functionality. Although it adopted many
-lcsim concepts, the implementation of the software has taken its own course. The
-largest challenge to the lcsim effort at the moment (beyond lack of funding) is
-to maintain some connection to the geometry definition functionality promised by
-DD4hep.
+{\color{red} What are the challenges for using this when the ILC becomes real?}
 
 \subsection{Future Plans}
 The core functionality is being kept current by upgrading to the latest versions
