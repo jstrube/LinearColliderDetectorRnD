@@ -1,23 +1,23 @@
-- How to update your repository to pull in the latest changes from the server:
-> svn up
+- First time checkout
+> git clone https://jstrube@bitbucket.org/jstrube/linearcolliderdetectorrnd.git
 
-- How to commit the changes to a file that already existed before:
-> svn commit -m "Changed the Authorlist" <filename>
-
-- How to check which files are under version control:
-> svn status
-
-- How to add a new file to the version control system:
-> svn add <filename>
-> svn commit -m "added a file with important content"
-
-- How to read the commit messages:
-> svn log
-
-- How to find out who changed what in a file (only useful for text files):
-> svn annotate <filename>
-
-
-- How to compile the latex document:
+- How to compile the latex document (works on linux and Mac OS X):
 > ./compileLatex
 
+- How to update your repository to pull in the latest changes from the server:
+> git pull
+
+- How to add a new file to the version control system:
+> git add <filename>
+> git commit -m "added a file with important content"
+> git push origin master
+
+- How to commit the changes to a file that already existed before:
+> git commit -am "Changed the Authorlist" <filename>
+> git push origin master
+
+- How to check which files are under version control:
+> git status
+
+- How to read the commit messages:
+> git log
