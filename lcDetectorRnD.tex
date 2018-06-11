@@ -3,14 +3,16 @@
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.png,.pdf,.jpg,.jpeg}
 \usepackage{subcaption}
-% want latin-1 character set in output
-\usepackage[T1]{fontenc}
-% want to use utf8 character set in input, useful for copy and paste from pdf
-\usepackage[utf8]{inputenc}
 %%% The next two are necessary to get the degree symbol in text and math mode
 \usepackage{textcomp}
 \usepackage{gensymb}
-\usepackage[colorlinks=true,urlcolor=cyan,plainpages=false]{hyperref}
+\usepackage{hyperref}
+\hypersetup{%
+  colorlinks = true,
+  linkcolor  = black,
+  urlcolor   = cyan,
+  plainpages = false
+}
 \usepackage{units}
 % for chemical symbols, relevant for gas mixes, for example
 \usepackage[version=4]{mhchem}
@@ -75,7 +77,7 @@
 \input{VertexDetector/CLICPIX/CLICPix}
 \newpage
 \input{VertexDetector/PixelSummary}
-\input{VertexDetector/ExecutiveSummary}
+% \input{VertexDetector/ExecutiveSummary}
 \newpage
 \chapter{Silicon Trackers}
 \input{Tracker/Motivation}
@@ -84,7 +86,7 @@
 \input{Tracker/KPIX/KPIX}
 \input{Tracker/SiTrackingSummary}
 \chapter{Gaseous Trackers}
-LCTPC collaboration spokesperson: Jochen Kaminski (email : kaminski@physik.uni-bonn.de)
+% LCTPC collaboration spokesperson: Jochen Kaminski (email : kaminski@physik.uni-bonn.de)
 \input{Tracker/TPC_Bonn/TPC_Bonn}
 \input{Tracker/TPCSummary}
 \chapter{Calorimeters}
@@ -113,13 +115,13 @@ LCTPC collaboration spokesperson: Jochen Kaminski (email : kaminski@physik.uni-b
 \chapter{Software Tools}
 \input{Software/Introduction}
 \input{Software/LCIO/LCIO}
-% \input{Software/LCSim/LCSim}
+% % \input{Software/LCSim/LCSim}
 \input{Software/DD4HEP/DD4HEP}
 \input{Software/Marlin/Marlin}
 \input{Software/PandoraPFA/PandoraPFA}
 \input{Software/LCFIPlus/LCFIPlus}
-\input{Software/Executive_Summary}
 \input{Software/SoftwareSummary}
+% \input{Software/Executive_Summary}
 \chapter{Spinoffs}
 \input{Spinoffs/Spinoffs}
 \printbibliography
